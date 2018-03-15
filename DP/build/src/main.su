@@ -1,0 +1,5 @@
+wdog.h:31:20:wdog_refresh	8	static
+main.c:31:28:main	40	static
+main.c:103:6:LPUART0_callback	16	static
+main.c:112:6:LPUART2_callback	16	static
+main.c:121:6:SYSTEM_Init	48	static

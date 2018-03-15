@@ -1,0 +1,31 @@
+/*
+ * Name: intmux.h
+ * Author: Martin Stankus
+ *
+ */
+
+#ifndef _INTMUX_H_
+#define _INTMUX_H_
+
+#include "MKL28Z7.h"
+
+#define INTMUX_IRQn_OFFSET		32
+
+#define INTMUX_LPTMR1_MASK		(1ul << (LPTMR1_IRQn - INTMUX_IRQn_OFFSET))
+#define INTMUX_LPSPI2_MASK		(1ul << (LPSPI2_IRQn - INTMUX_IRQn_OFFSET))
+#define INTMUX_LPUART2_MASK		(1ul << (LPUART2_IRQn - INTMUX_IRQn_OFFSET))
+#define INTMUX_EMVSIM0_MASK		(1ul << (EMVSIM0_IRQn - INTMUX_IRQn_OFFSET))
+#define INTMUX_LPI2C2_MASK		(1ul << (LPI2C2_IRQn - INTMUX_IRQn_OFFSET))
+#define INTMUX_TSI0_MASK		(1ul << (TSI0_IRQn - INTMUX_IRQn_OFFSET))
+#define INTMUX_PMC_MASK			(1ul << (PMC_IRQn - INTMUX_IRQn_OFFSET))
+#define INTMUX_FTFA_MASK		(1ul << (FTFA_IRQn - INTMUX_IRQn_OFFSET))
+#define INTMUX_SCG_MASK			(1ul << (SCG_IRQn - INTMUX_IRQn_OFFSET))
+#define INTMUX_WDOG0_MASK		(1ul << (WDOG0_IRQn - INTMUX_IRQn_OFFSET))
+#define INTMUX_DAC0_MASK		(1ul << (DAC0_IRQn - INTMUX_IRQn_OFFSET))
+#define INTMUX_TRNG_MASK		(1ul << (TRNG_IRQn - INTMUX_IRQn_OFFSET))
+#define INTMUX_RCM_MASK			(1ul << (RCM_IRQn - INTMUX_IRQn_OFFSET))
+#define INTMUX_CMP0_MASK		(1ul << (CMP0_IRQn - INTMUX_IRQn_OFFSET))
+#define INTMUX_CMP1_MASK		(1ul << (CMP1_IRQn - INTMUX_IRQn_OFFSET))
+#define INTMUX_RTC_MASK			(1ul << (RTC_IRQn - INTMUX_IRQn_OFFSET))
+
+#endif /* _INTMUX_H_ */

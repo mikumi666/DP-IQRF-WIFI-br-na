@@ -1,0 +1,3 @@
+wifi_rn131.c:15:6:rn131_Init	16	static
+wifi_rn131.c:21:6:UART_callback	16	static
+wifi_rn131.c:37:6:rn131_test	24	static

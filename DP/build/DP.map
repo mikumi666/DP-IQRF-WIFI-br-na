@@ -1,0 +1,1064 @@
+Archive member included to satisfy reference by file (symbol)
+
+/opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_udivsi3.o)
+                              src/_util/queue.o (__aeabi_uidivmod)
+/opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_divsi3.o)
+                              src/main.o (__aeabi_idiv)
+/opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_dvmd_tls.o)
+                              /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+
+Allocating common symbols
+Common symbol       size              file
+
+SystemCoreClock     0x4               src/_cmsis/system_MKL28Z7.o
+buff1               0x32              src/main.o
+buff2               0x32              src/main.o
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 src/_cmsis/startup_MKL28Z7.o
+ .data          0x0000000000000000        0x0 src/_cmsis/startup_MKL28Z7.o
+ .bss           0x0000000000000000        0x0 src/_cmsis/startup_MKL28Z7.o
+ .group         0x0000000000000000        0x8 src/_cmsis/system_MKL28Z7.o
+ .group         0x0000000000000000        0x8 src/_cmsis/system_MKL28Z7.o
+ .group         0x0000000000000000        0x8 src/_cmsis/system_MKL28Z7.o
+ .group         0x0000000000000000        0x8 src/_cmsis/system_MKL28Z7.o
+ .group         0x0000000000000000        0x8 src/_cmsis/system_MKL28Z7.o
+ .group         0x0000000000000000        0x8 src/_cmsis/system_MKL28Z7.o
+ .group         0x0000000000000000        0x8 src/_cmsis/system_MKL28Z7.o
+ .group         0x0000000000000000        0x8 src/_cmsis/system_MKL28Z7.o
+ .text          0x0000000000000000        0x0 src/_cmsis/system_MKL28Z7.o
+ .data          0x0000000000000000        0x0 src/_cmsis/system_MKL28Z7.o
+ .bss           0x0000000000000000        0x0 src/_cmsis/system_MKL28Z7.o
+ .group         0x0000000000000000        0x8 src/_system/clkout.o
+ .group         0x0000000000000000        0x8 src/_system/clkout.o
+ .group         0x0000000000000000        0x8 src/_system/clkout.o
+ .group         0x0000000000000000        0x8 src/_system/clkout.o
+ .group         0x0000000000000000        0x8 src/_system/clkout.o
+ .group         0x0000000000000000        0x8 src/_system/clkout.o
+ .group         0x0000000000000000        0x8 src/_system/clkout.o
+ .group         0x0000000000000000        0x8 src/_system/clkout.o
+ .group         0x0000000000000000        0x8 src/_system/clkout.o
+ .text          0x0000000000000000        0x0 src/_system/clkout.o
+ .data          0x0000000000000000        0x0 src/_system/clkout.o
+ .bss           0x0000000000000000        0x0 src/_system/clkout.o
+ .text.clkout_set
+                0x0000000000000000       0xa8 src/_system/clkout.o
+ .rodata.clkout_set
+                0x0000000000000000       0x18 src/_system/clkout.o
+ .debug_info    0x0000000000000000      0x396 src/_system/clkout.o
+ .debug_abbrev  0x0000000000000000      0x107 src/_system/clkout.o
+ .debug_aranges
+                0x0000000000000000       0x20 src/_system/clkout.o
+ .debug_ranges  0x0000000000000000       0x10 src/_system/clkout.o
+ .debug_macro   0x0000000000000000       0x79 src/_system/clkout.o
+ .debug_macro   0x0000000000000000      0x8a4 src/_system/clkout.o
+ .debug_macro   0x0000000000000000       0x3f src/_system/clkout.o
+ .debug_macro   0x0000000000000000      0x34e src/_system/clkout.o
+ .debug_macro   0x0000000000000000       0x34 src/_system/clkout.o
+ .debug_macro   0x0000000000000000       0x26 src/_system/clkout.o
+ .debug_macro   0x0000000000000000      0x44f src/_system/clkout.o
+ .debug_macro   0x0000000000000000      0x1c0 src/_system/clkout.o
+ .debug_macro   0x0000000000000000     0xaac0 src/_system/clkout.o
+ .debug_macro   0x0000000000000000       0x40 src/_system/clkout.o
+ .debug_line    0x0000000000000000      0x189 src/_system/clkout.o
+ .debug_str     0x0000000000000000    0x55d45 src/_system/clkout.o
+ .comment       0x0000000000000000       0x7d src/_system/clkout.o
+ .debug_frame   0x0000000000000000       0x30 src/_system/clkout.o
+ .ARM.attributes
+                0x0000000000000000       0x32 src/_system/clkout.o
+ .group         0x0000000000000000        0x8 src/_system/fcf.o
+ .group         0x0000000000000000        0x8 src/_system/fcf.o
+ .group         0x0000000000000000        0x8 src/_system/fcf.o
+ .text          0x0000000000000000        0x0 src/_system/fcf.o
+ .data          0x0000000000000000        0x0 src/_system/fcf.o
+ .bss           0x0000000000000000        0x0 src/_system/fcf.o
+ .debug_macro   0x0000000000000000      0x8a4 src/_system/fcf.o
+ .debug_macro   0x0000000000000000      0x34e src/_system/fcf.o
+ .text          0x0000000000000000        0x0 src/_system/hardfault.o
+ .data          0x0000000000000000        0x0 src/_system/hardfault.o
+ .bss           0x0000000000000000        0x0 src/_system/hardfault.o
+ .text          0x0000000000000000        0x0 src/_system/intmux.o
+ .data          0x0000000000000000        0x0 src/_system/intmux.o
+ .bss           0x0000000000000000        0x0 src/_system/intmux.o
+ .text          0x0000000000000000        0x0 src/_system/mem.o
+ .data          0x0000000000000000        0x0 src/_system/mem.o
+ .bss           0x0000000000000000        0x0 src/_system/mem.o
+ .text.memcmp   0x0000000000000000       0x24 src/_system/mem.o
+ .text.memmove  0x0000000000000000       0x12 src/_system/mem.o
+ .text.memcpy_up
+                0x0000000000000000       0x16 src/_system/mem.o
+ .text          0x0000000000000000        0x0 src/_system/nmi.o
+ .data          0x0000000000000000        0x0 src/_system/nmi.o
+ .bss           0x0000000000000000        0x0 src/_system/nmi.o
+ .text          0x0000000000000000        0x0 src/_system/tstmr.o
+ .data          0x0000000000000000        0x0 src/_system/tstmr.o
+ .bss           0x0000000000000000        0x0 src/_system/tstmr.o
+ .group         0x0000000000000000        0x8 src/_system/wdog.o
+ .group         0x0000000000000000        0x8 src/_system/wdog.o
+ .group         0x0000000000000000        0x8 src/_system/wdog.o
+ .group         0x0000000000000000        0x8 src/_system/wdog.o
+ .group         0x0000000000000000        0x8 src/_system/wdog.o
+ .group         0x0000000000000000        0x8 src/_system/wdog.o
+ .group         0x0000000000000000        0x8 src/_system/wdog.o
+ .group         0x0000000000000000        0x8 src/_system/wdog.o
+ .group         0x0000000000000000        0x8 src/_system/wdog.o
+ .text          0x0000000000000000        0x0 src/_system/wdog.o
+ .data          0x0000000000000000        0x0 src/_system/wdog.o
+ .bss           0x0000000000000000        0x0 src/_system/wdog.o
+ .debug_macro   0x0000000000000000      0x8a4 src/_system/wdog.o
+ .debug_macro   0x0000000000000000       0x3f src/_system/wdog.o
+ .debug_macro   0x0000000000000000      0x34e src/_system/wdog.o
+ .debug_macro   0x0000000000000000       0x34 src/_system/wdog.o
+ .debug_macro   0x0000000000000000       0x26 src/_system/wdog.o
+ .debug_macro   0x0000000000000000      0x44f src/_system/wdog.o
+ .debug_macro   0x0000000000000000      0x1c0 src/_system/wdog.o
+ .debug_macro   0x0000000000000000     0xaac0 src/_system/wdog.o
+ .group         0x0000000000000000        0x8 src/_util/LPUARTHandler.o
+ .group         0x0000000000000000        0x8 src/_util/LPUARTHandler.o
+ .group         0x0000000000000000        0x8 src/_util/LPUARTHandler.o
+ .group         0x0000000000000000        0x8 src/_util/LPUARTHandler.o
+ .group         0x0000000000000000        0x8 src/_util/LPUARTHandler.o
+ .group         0x0000000000000000        0x8 src/_util/LPUARTHandler.o
+ .group         0x0000000000000000        0x8 src/_util/LPUARTHandler.o
+ .group         0x0000000000000000        0x8 src/_util/LPUARTHandler.o
+ .group         0x0000000000000000        0x8 src/_util/LPUARTHandler.o
+ .group         0x0000000000000000        0x8 src/_util/LPUARTHandler.o
+ .group         0x0000000000000000        0x8 src/_util/LPUARTHandler.o
+ .text          0x0000000000000000        0x0 src/_util/LPUARTHandler.o
+ .data          0x0000000000000000        0x0 src/_util/LPUARTHandler.o
+ .bss           0x0000000000000000        0x0 src/_util/LPUARTHandler.o
+ .debug_macro   0x0000000000000000      0x8a4 src/_util/LPUARTHandler.o
+ .debug_macro   0x0000000000000000       0x3f src/_util/LPUARTHandler.o
+ .debug_macro   0x0000000000000000      0x34e src/_util/LPUARTHandler.o
+ .debug_macro   0x0000000000000000       0x34 src/_util/LPUARTHandler.o
+ .debug_macro   0x0000000000000000       0x26 src/_util/LPUARTHandler.o
+ .debug_macro   0x0000000000000000      0x44f src/_util/LPUARTHandler.o
+ .debug_macro   0x0000000000000000      0x1c0 src/_util/LPUARTHandler.o
+ .debug_macro   0x0000000000000000     0xaac0 src/_util/LPUARTHandler.o
+ .group         0x0000000000000000        0x8 src/_util/queue.o
+ .group         0x0000000000000000        0x8 src/_util/queue.o
+ .group         0x0000000000000000        0x8 src/_util/queue.o
+ .text          0x0000000000000000        0x0 src/_util/queue.o
+ .data          0x0000000000000000        0x0 src/_util/queue.o
+ .bss           0x0000000000000000        0x0 src/_util/queue.o
+ .text.Queue_getFreeCount
+                0x0000000000000000       0x20 src/_util/queue.o
+ .debug_macro   0x0000000000000000      0x8a4 src/_util/queue.o
+ .debug_macro   0x0000000000000000      0x34e src/_util/queue.o
+ .debug_macro   0x0000000000000000       0x22 src/_util/queue.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USB.o
+ .text          0x0000000000000000        0x0 src/_util/usb/USB.o
+ .data          0x0000000000000000        0x0 src/_util/usb/USB.o
+ .bss           0x0000000000000000        0x0 src/_util/usb/USB.o
+ .text.NVIC_SetPriority
+                0x0000000000000000       0xdc src/_util/usb/USB.o
+ .bss.usbDevice
+                0x0000000000000000       0x70 src/_util/usb/USB.o
+ .text.USB_devInit
+                0x0000000000000000       0x98 src/_util/usb/USB.o
+ .debug_info    0x0000000000000000      0xdc5 src/_util/usb/USB.o
+ .debug_abbrev  0x0000000000000000      0x24e src/_util/usb/USB.o
+ .debug_aranges
+                0x0000000000000000       0x28 src/_util/usb/USB.o
+ .debug_ranges  0x0000000000000000       0x18 src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000      0x177 src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000      0x8a4 src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000       0x22 src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000      0x34e src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000       0x22 src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000       0x52 src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000       0x8d src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000       0x3c src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000       0x9c src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000      0x174 src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000       0x57 src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000       0x58 src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000       0x1f src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000       0x43 src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000       0x20 src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000      0x1a3 src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000      0x30d src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000       0x10 src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000       0x35 src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000       0x20 src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000       0x3f src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000       0x3a src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000       0x26 src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000      0x44f src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000      0x1c0 src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000     0xaac0 src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000       0x28 src/_util/usb/USB.o
+ .debug_macro   0x0000000000000000       0x40 src/_util/usb/USB.o
+ .debug_line    0x0000000000000000      0x399 src/_util/usb/USB.o
+ .debug_str     0x0000000000000000    0x59b29 src/_util/usb/USB.o
+ .comment       0x0000000000000000       0x7d src/_util/usb/USB.o
+ .debug_frame   0x0000000000000000       0x54 src/_util/usb/USB.o
+ .ARM.attributes
+                0x0000000000000000       0x32 src/_util/usb/USB.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/_util/usb/USBkhci.o
+ .text          0x0000000000000000        0x0 src/_util/usb/USBkhci.o
+ .data          0x0000000000000000        0x0 src/_util/usb/USBkhci.o
+ .bss           0x0000000000000000        0x0 src/_util/usb/USBkhci.o
+ .text.USBkhci_devInit
+                0x0000000000000000      0x1ec src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000      0x8a4 src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000       0x22 src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000       0x3f src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000      0x34e src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000       0x34 src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000       0x26 src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000      0x44f src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000      0x1c0 src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000     0xaac0 src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000       0x22 src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000       0x52 src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000       0x8d src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000       0x3c src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000       0x9c src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000      0x174 src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000       0x57 src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000       0x58 src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000       0x1f src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000       0x43 src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000       0x20 src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000      0x1a3 src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000      0x30d src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000       0x10 src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000       0x35 src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000       0x20 src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000       0x28 src/_util/usb/USBkhci.o
+ .debug_macro   0x0000000000000000       0x40 src/_util/usb/USBkhci.o
+ .group         0x0000000000000000        0x8 src/board.o
+ .group         0x0000000000000000        0x8 src/board.o
+ .group         0x0000000000000000        0x8 src/board.o
+ .group         0x0000000000000000        0x8 src/board.o
+ .group         0x0000000000000000        0x8 src/board.o
+ .group         0x0000000000000000        0x8 src/board.o
+ .group         0x0000000000000000        0x8 src/board.o
+ .group         0x0000000000000000        0x8 src/board.o
+ .group         0x0000000000000000        0x8 src/board.o
+ .group         0x0000000000000000        0x8 src/board.o
+ .group         0x0000000000000000        0x8 src/board.o
+ .group         0x0000000000000000        0x8 src/board.o
+ .text          0x0000000000000000        0x0 src/board.o
+ .data          0x0000000000000000        0x0 src/board.o
+ .bss           0x0000000000000000        0x0 src/board.o
+ .debug_macro   0x0000000000000000      0x8a4 src/board.o
+ .debug_macro   0x0000000000000000       0x22 src/board.o
+ .debug_macro   0x0000000000000000       0x3f src/board.o
+ .debug_macro   0x0000000000000000      0x34e src/board.o
+ .debug_macro   0x0000000000000000       0x34 src/board.o
+ .debug_macro   0x0000000000000000       0x26 src/board.o
+ .debug_macro   0x0000000000000000      0x44f src/board.o
+ .debug_macro   0x0000000000000000      0x1c0 src/board.o
+ .debug_macro   0x0000000000000000     0xaac0 src/board.o
+ .group         0x0000000000000000        0x8 src/main.o
+ .group         0x0000000000000000        0x8 src/main.o
+ .group         0x0000000000000000        0x8 src/main.o
+ .group         0x0000000000000000        0x8 src/main.o
+ .group         0x0000000000000000        0x8 src/main.o
+ .group         0x0000000000000000        0x8 src/main.o
+ .group         0x0000000000000000        0x8 src/main.o
+ .group         0x0000000000000000        0x8 src/main.o
+ .group         0x0000000000000000        0x8 src/main.o
+ .group         0x0000000000000000        0x8 src/main.o
+ .group         0x0000000000000000        0x8 src/main.o
+ .group         0x0000000000000000        0x8 src/main.o
+ .group         0x0000000000000000        0x8 src/main.o
+ .group         0x0000000000000000        0x8 src/main.o
+ .group         0x0000000000000000        0x8 src/main.o
+ .group         0x0000000000000000        0x8 src/main.o
+ .text          0x0000000000000000        0x0 src/main.o
+ .data          0x0000000000000000        0x0 src/main.o
+ .bss           0x0000000000000000        0x0 src/main.o
+ .text.LPUART0_callback
+                0x0000000000000000       0x38 src/main.o
+ .text.LPUART2_callback
+                0x0000000000000000       0x38 src/main.o
+ .debug_macro   0x0000000000000000      0x8a4 src/main.o
+ .debug_macro   0x0000000000000000       0x3f src/main.o
+ .debug_macro   0x0000000000000000      0x34e src/main.o
+ .debug_macro   0x0000000000000000       0x34 src/main.o
+ .debug_macro   0x0000000000000000       0x26 src/main.o
+ .debug_macro   0x0000000000000000      0x44f src/main.o
+ .debug_macro   0x0000000000000000      0x1c0 src/main.o
+ .debug_macro   0x0000000000000000     0xaac0 src/main.o
+ .debug_macro   0x0000000000000000       0x1c src/main.o
+ .debug_macro   0x0000000000000000       0x70 src/main.o
+ .debug_macro   0x0000000000000000       0x22 src/main.o
+ .debug_macro   0x0000000000000000       0x10 src/main.o
+ .debug_macro   0x0000000000000000       0x16 src/main.o
+ .debug_macro   0x0000000000000000       0x70 src/main.o
+ COMMON         0x0000000000000000       0x66 src/main.o
+ .group         0x0000000000000000        0x8 src/wifi_rn131.o
+ .group         0x0000000000000000        0x8 src/wifi_rn131.o
+ .group         0x0000000000000000        0x8 src/wifi_rn131.o
+ .group         0x0000000000000000        0x8 src/wifi_rn131.o
+ .group         0x0000000000000000        0x8 src/wifi_rn131.o
+ .group         0x0000000000000000        0x8 src/wifi_rn131.o
+ .group         0x0000000000000000        0x8 src/wifi_rn131.o
+ .group         0x0000000000000000        0x8 src/wifi_rn131.o
+ .group         0x0000000000000000        0x8 src/wifi_rn131.o
+ .group         0x0000000000000000        0x8 src/wifi_rn131.o
+ .group         0x0000000000000000        0x8 src/wifi_rn131.o
+ .group         0x0000000000000000        0x8 src/wifi_rn131.o
+ .text          0x0000000000000000        0x0 src/wifi_rn131.o
+ .data          0x0000000000000000        0x0 src/wifi_rn131.o
+ .bss           0x0000000000000000        0x0 src/wifi_rn131.o
+ .rodata.UART_chann
+                0x0000000000000000        0x1 src/wifi_rn131.o
+ .debug_macro   0x0000000000000000      0x8a4 src/wifi_rn131.o
+ .debug_macro   0x0000000000000000       0x22 src/wifi_rn131.o
+ .debug_macro   0x0000000000000000       0x3f src/wifi_rn131.o
+ .debug_macro   0x0000000000000000      0x34e src/wifi_rn131.o
+ .debug_macro   0x0000000000000000       0x34 src/wifi_rn131.o
+ .debug_macro   0x0000000000000000       0x26 src/wifi_rn131.o
+ .debug_macro   0x0000000000000000      0x44f src/wifi_rn131.o
+ .debug_macro   0x0000000000000000      0x1c0 src/wifi_rn131.o
+ .debug_macro   0x0000000000000000     0xaac0 src/wifi_rn131.o
+ .debug_macro   0x0000000000000000       0x10 src/wifi_rn131.o
+ .debug_macro   0x0000000000000000       0x16 src/wifi_rn131.o
+ .debug_macro   0x0000000000000000       0x28 src/wifi_rn131.o
+ .data          0x0000000000000000        0x0 /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_udivsi3.o)
+ .bss           0x0000000000000000        0x0 /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_udivsi3.o)
+ .data          0x0000000000000000        0x0 /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_divsi3.o)
+ .bss           0x0000000000000000        0x0 /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_divsi3.o)
+ .data          0x0000000000000000        0x0 /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_dvmd_tls.o)
+ .bss           0x0000000000000000        0x0 /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_dvmd_tls.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+m_flash_vectab   0x0000000000000000 0x0000000000000140 r
+m_flash_gap      0x0000000000000140 0x00000000000002c0 r
+m_flash_fcf      0x0000000000000400 0x0000000000000010 r
+m_flash_bulk     0x0000000000000410 0x000000000007fbf0 xr
+m_sram           0x000000001fff8000 0x0000000000020000 rw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x0000000000000800                STACK_SIZE = 0x800
+                0x0000000000000800                STACK_SIZE_DEF = 0x800
+                0x0000000000000800                STACK_SIZE_VAL = DEFINED (STACK_SIZE)?STACK_SIZE:STACK_SIZE_DEF
+
+.vectab         0x0000000000000000      0x140
+ *(.vectab)
+ .vectab        0x0000000000000000      0x140 src/_cmsis/startup_MKL28Z7.o
+
+.fcf            0x0000000000000400       0x10
+ *(.fcf)
+ .fcf           0x0000000000000400       0x10 src/_system/fcf.o
+                0x0000000000000400                fcf
+
+.text           0x0000000000000410     0x16f4
+ *(.text)
+ .text          0x0000000000000410      0x114 /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_udivsi3.o)
+                0x0000000000000410                __udivsi3
+                0x0000000000000410                __aeabi_uidiv
+                0x000000000000051c                __aeabi_uidivmod
+ .text          0x0000000000000524      0x1d4 /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_divsi3.o)
+                0x0000000000000524                __aeabi_idiv
+                0x0000000000000524                __divsi3
+                0x00000000000006f0                __aeabi_idivmod
+ .text          0x00000000000006f8        0x4 /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_dvmd_tls.o)
+                0x00000000000006f8                __aeabi_ldiv0
+                0x00000000000006f8                __aeabi_idiv0
+ *(.text*)
+ .text.Reset_Handler
+                0x00000000000006fc       0x50 src/_cmsis/startup_MKL28Z7.o
+                0x00000000000006fc                Reset_Handler
+ .text.Default_Handler
+                0x000000000000074c        0x4 src/_cmsis/startup_MKL28Z7.o
+                0x000000000000074c                SVCall_Handler
+                0x000000000000074c                Reserved76_IRQHandler
+                0x000000000000074c                SysTick_Handler
+                0x000000000000074c                Reserved50_IRQHandler
+                0x000000000000074c                PendSV_Handler
+                0x000000000000074c                Reserved74_IRQHandler
+                0x000000000000074c                FLEXIO0_IRQHandler
+                0x000000000000074c                Reserved79_IRQHandler
+                0x000000000000074c                TPM0_IRQHandler
+                0x000000000000074c                LPIT0_IRQHandler
+                0x000000000000074c                LPI2C0_IRQHandler
+                0x000000000000074c                Reserved68_IRQHandler
+                0x000000000000074c                Reserved77_IRQHandler
+                0x000000000000074c                I2S0_IRQHandler
+                0x000000000000074c                WDOG0_IRQHandler
+                0x000000000000074c                TSI0_IRQHandler
+                0x000000000000074c                DMA0_26_IRQHandler
+                0x000000000000074c                Reserved75_IRQHandler
+                0x000000000000074c                ADC0_IRQHandler
+                0x000000000000074c                EMVSIM0_IRQHandler
+                0x000000000000074c                DMA0_04_IRQHandler
+                0x000000000000074c                CMP1_IRQHandler
+                0x000000000000074c                Reserved71_IRQHandler
+                0x000000000000074c                PORTD_IRQHandler
+                0x000000000000074c                Reserved69_IRQHandler
+                0x000000000000074c                PORTB_IRQHandler
+                0x000000000000074c                LLWU0_IRQHandler
+                0x000000000000074c                Reserved70_IRQHandler
+                0x000000000000074c                TPM2_IRQHandler
+                0x000000000000074c                RTC_IRQHandler
+                0x000000000000074c                Reserved78_IRQHandler
+                0x000000000000074c                LPSPI1_IRQHandler
+                0x000000000000074c                RTC_Seconds_IRQHandler
+                0x000000000000074c                LPI2C2_IRQHandler
+                0x000000000000074c                Reserved72_IRQHandler
+                0x000000000000074c                Reserved32_IRQHandler
+                0x000000000000074c                DMA0_37_IRQHandler
+                0x000000000000074c                LPSPI0_IRQHandler
+                0x000000000000074c                CTI0_DMA0_Error_IRQHandler
+                0x000000000000074c                RCM_IRQHandler
+                0x000000000000074c                DMA0_15_IRQHandler
+                0x000000000000074c                DAC0_IRQHandler
+                0x000000000000074c                SCG_IRQHandler
+                0x000000000000074c                LPI2C1_IRQHandler
+                0x000000000000074c                Reserved73_IRQHandler
+                0x000000000000074c                PMC_IRQHandler
+                0x000000000000074c                TPM1_IRQHandler
+                0x000000000000074c                Reserved51_IRQHandler
+                0x000000000000074c                PORTA_IRQHandler
+                0x000000000000074c                LPSPI2_IRQHandler
+                0x000000000000074c                FTFA_IRQHandler
+                0x000000000000074c                PORTE_IRQHandler
+                0x000000000000074c                LPTMR0_IRQHandler
+                0x000000000000074c                LPTMR1_IRQHandler
+                0x000000000000074c                CMP0_IRQHandler
+                0x000000000000074c                Reserved49_IRQHandler
+                0x000000000000074c                TRNG_IRQHandler
+                0x000000000000074c                PORTC_IRQHandler
+                0x000000000000074c                Reserved67_IRQHandler
+ .text.SystemInit
+                0x0000000000000750      0x140 src/_cmsis/system_MKL28Z7.o
+                0x0000000000000750                SystemInit
+ .text.SystemCoreClockUpdate
+                0x0000000000000890       0x18 src/_cmsis/system_MKL28Z7.o
+                0x0000000000000890                SystemCoreClockUpdate
+ .text.HardFault_Handler
+                0x00000000000008a8        0x4 src/_system/hardfault.o
+                0x00000000000008a8                HardFault_Handler
+ .text.INTMUX0_IRQHandler
+                0x00000000000008ac       0x2c src/_system/intmux.o
+                0x00000000000008ac                INTMUX0_3_IRQHandler
+                0x00000000000008ac                INTMUX0_1_IRQHandler
+                0x00000000000008ac                INTMUX0_0_IRQHandler
+                0x00000000000008ac                INTMUX0_2_IRQHandler
+ .text.memcpy   0x00000000000008d8        0xe src/_system/mem.o
+                0x00000000000008d8                memcpy
+ .text.memset   0x00000000000008e6        0xc src/_system/mem.o
+                0x00000000000008e6                memset
+ .text.NMI_Handler
+                0x00000000000008f2        0x2 src/_system/nmi.o
+                0x00000000000008f2                NMI_Handler
+ .text.tstmr_get_val
+                0x00000000000008f4       0x1c src/_system/tstmr.o
+                0x00000000000008f4                tstmr_get_val
+ .text.wdog_set
+                0x0000000000000910      0x114 src/_system/wdog.o
+                0x0000000000000910                wdog_set
+ .text.NVIC_EnableIRQ
+                0x0000000000000a24       0x2c src/_util/LPUARTHandler.o
+ .text.NVIC_SetPriority
+                0x0000000000000a50       0xdc src/_util/LPUARTHandler.o
+ .text.LPUART0_IRQHandler
+                0x0000000000000b2c       0x10 src/_util/LPUARTHandler.o
+                0x0000000000000b2c                LPUART0_IRQHandler
+ .text.LPUART1_IRQHandler
+                0x0000000000000b3c       0x10 src/_util/LPUARTHandler.o
+                0x0000000000000b3c                LPUART1_IRQHandler
+ .text.LPUART2_IRQHandler
+                0x0000000000000b4c       0x10 src/_util/LPUARTHandler.o
+                0x0000000000000b4c                LPUART2_IRQHandler
+ .text.LPUARTHandler_Init
+                0x0000000000000b5c       0xd8 src/_util/LPUARTHandler.o
+                0x0000000000000b5c                LPUARTHandler_Init
+ .text.LPUARTHandler_SendLine
+                0x0000000000000c34       0xc8 src/_util/LPUARTHandler.o
+                0x0000000000000c34                LPUARTHandler_SendLine
+ .text.LPUARTHandler_SendData
+                0x0000000000000cfc       0xb0 src/_util/LPUARTHandler.o
+                0x0000000000000cfc                LPUARTHandler_SendData
+ .text.LPURTHandler_ReadLine
+                0x0000000000000dac       0xd8 src/_util/LPUARTHandler.o
+                0x0000000000000dac                LPURTHandler_ReadLine
+ .text.LPUART_IRQHandler
+                0x0000000000000e84       0xcc src/_util/LPUARTHandler.o
+ .text.Queue_Init
+                0x0000000000000f50       0xf4 src/_util/queue.o
+                0x0000000000000f50                Queue_Init
+ .text.Queue_Enqueue
+                0x0000000000001044       0xfc src/_util/queue.o
+                0x0000000000001044                Queue_Enqueue
+ .text.Queue_Dequeue
+                0x0000000000001140       0xc4 src/_util/queue.o
+                0x0000000000001140                Queue_Dequeue
+ .text.Queue_getUsedCount
+                0x0000000000001204       0x18 src/_util/queue.o
+                0x0000000000001204                Queue_getUsedCount
+ .text.USB0_IRQHandler
+                0x000000000000121c       0x30 src/_util/usb/USBkhci.o
+                0x000000000000121c                USB0_IRQHandler
+ .text.USBkhci_devControl
+                0x000000000000124c       0xbc src/_util/usb/USBkhci.o
+                0x000000000000124c                USBkhci_devControl
+ .text.USBkhci_ISRFcn_Reset
+                0x0000000000001308       0x44 src/_util/usb/USBkhci.o
+ .text.USBkhci_devNotification
+                0x000000000000134c       0x48 src/_util/usb/USBkhci.o
+ .text.USBkhci_devResetNotification
+                0x0000000000001394       0x2c src/_util/usb/USBkhci.o
+ .text.NVIC_EnableIRQ
+                0x00000000000013c0       0x2c src/board.o
+ .text.NVIC_SetPriority
+                0x00000000000013ec       0xdc src/board.o
+ .text.Board_Init
+                0x00000000000014c8       0x38 src/board.o
+                0x00000000000014c8                Board_Init
+ .text.Board_MCULED_Set
+                0x0000000000001500       0x5c src/board.o
+                0x0000000000001500                Board_MCULED_Set
+ .text.Board_MCUBTN_Get
+                0x000000000000155c       0x50 src/board.o
+                0x000000000000155c                Board_MCUBTN_Get
+ .text.board_WIFI_Init
+                0x00000000000015ac       0xa4 src/board.o
+ .text.board_MCULED_Init
+                0x0000000000001650       0x40 src/board.o
+ .text.board_MCUBTN_Init
+                0x0000000000001690       0x40 src/board.o
+ .text.board_MCUSW_Init
+                0x00000000000016d0       0x44 src/board.o
+ .text.wdog_refresh
+                0x0000000000001714       0x18 src/main.o
+ .text.main     0x000000000000172c      0x158 src/main.o
+                0x000000000000172c                main
+ .text.SYSTEM_Init
+                0x0000000000001884       0xd4 src/main.o
+                0x0000000000001884                SYSTEM_Init
+ .text.rn131_Init
+                0x0000000000001958       0x20 src/wifi_rn131.o
+                0x0000000000001958                rn131_Init
+ .text.UART_callback
+                0x0000000000001978       0x4c src/wifi_rn131.o
+ .text.rn131_test
+                0x00000000000019c4       0x34 src/wifi_rn131.o
+                0x00000000000019c4                rn131_test
+ *(.rodata)
+ .rodata        0x00000000000019f8        0xf src/main.o
+ *fill*         0x0000000000001a07        0x1 
+ .rodata        0x0000000000001a08        0xd src/wifi_rn131.o
+ *(.rodata*)
+ *fill*         0x0000000000001a15        0x3 
+ .rodata.wdog_set
+                0x0000000000001a18       0x24 src/_system/wdog.o
+ .rodata.LF     0x0000000000001a3c        0x1 src/_util/LPUARTHandler.o
+ *fill*         0x0000000000001a3d        0x3 
+ .rodata.Queue_Enqueue
+                0x0000000000001a40       0x2c src/_util/queue.o
+ .rodata.Queue_Dequeue
+                0x0000000000001a6c       0x2c src/_util/queue.o
+ .rodata.USBkhci_devControl
+                0x0000000000001a98       0x4c src/_util/usb/USBkhci.o
+ .rodata.MCULED
+                0x0000000000001ae4       0x10 src/board.o
+ .rodata.MCUBTN
+                0x0000000000001af4       0x10 src/board.o
+
+.glue_7         0x0000000000001b04        0x0
+ .glue_7        0x0000000000001b04        0x0 linker stubs
+
+.glue_7t        0x0000000000001b04        0x0
+ .glue_7t       0x0000000000001b04        0x0 linker stubs
+
+.vfp11_veneer   0x0000000000001b04        0x0
+ .vfp11_veneer  0x0000000000001b04        0x0 linker stubs
+
+.v4_bx          0x0000000000001b04        0x0
+ .v4_bx         0x0000000000001b04        0x0 linker stubs
+
+.iplt           0x0000000000001b04        0x0
+ .iplt          0x0000000000001b04        0x0 src/_cmsis/startup_MKL28Z7.o
+
+.rel.dyn        0x0000000000001b04        0x0
+ .rel.iplt      0x0000000000001b04        0x0 src/_cmsis/startup_MKL28Z7.o
+
+.stack          0x000000001fff8000      0x800
+                0x000000001fff8000                . = ALIGN (0x8)
+                0x000000001fff8000                STACK_BOTTOM = .
+                0x000000001fff8800                . = (. + STACK_SIZE_VAL)
+ *fill*         0x000000001fff8000      0x800 
+                0x000000001fff8800                . = ALIGN (0x8)
+                0x000000001fff8800                STACK_TOP = .
+
+.data           0x000000001fff8800      0x264 load address 0x0000000000001b04
+                0x000000001fff8800                DATA_BEGIN = .
+ *(.data)
+ *(.data*)
+ .data.LPUARTHandler_Instance
+                0x000000001fff8800      0x1d4 src/_util/LPUARTHandler.o
+ .data.usbKhci_state
+                0x000000001fff89d4       0x90 src/_util/usb/USBkhci.o
+                0x000000001fff8a64                DATA_END = .
+                0x0000000000001b04                DATA_INIT = LOADADDR (.data)
+
+.igot.plt       0x000000001fff8a64        0x0 load address 0x0000000000001d68
+ .igot.plt      0x000000001fff8a64        0x0 src/_cmsis/startup_MKL28Z7.o
+
+.bss            0x000000001fff8c00      0x4a8 load address 0x0000000000001d68
+                0x000000001fff8c00                BSS_BEGIN = .
+ *(.bss)
+ *(.bss*)
+ .bss.Queue_Instances
+                0x000000001fff8c00       0xf0 src/_util/queue.o
+ .bss.QueuesCount
+                0x000000001fff8cf0        0x1 src/_util/queue.o
+ *fill*         0x000000001fff8cf1      0x10f 
+ .bss.usbKhci_BDT_buffer
+                0x000000001fff8e00      0x200 src/_util/usb/USBkhci.o
+ .bss.usbKhci_DMAalignBuff
+                0x000000001fff9000       0x40 src/_util/usb/USBkhci.o
+ .bss.buff      0x000000001fff9040       0x64 src/wifi_rn131.o
+ *(COMMON)
+ COMMON         0x000000001fff90a4        0x4 src/_cmsis/system_MKL28Z7.o
+                0x000000001fff90a4                SystemCoreClock
+                0x000000001fff90a8                BSS_END = .
+LOAD src/_cmsis/startup_MKL28Z7.o
+LOAD src/_cmsis/system_MKL28Z7.o
+LOAD src/_system/clkout.o
+LOAD src/_system/fcf.o
+LOAD src/_system/hardfault.o
+LOAD src/_system/intmux.o
+LOAD src/_system/mem.o
+LOAD src/_system/nmi.o
+LOAD src/_system/tstmr.o
+LOAD src/_system/wdog.o
+LOAD src/_util/LPUARTHandler.o
+LOAD src/_util/queue.o
+LOAD src/_util/usb/USB.o
+LOAD src/_util/usb/USBkhci.o
+LOAD src/board.o
+LOAD src/main.o
+LOAD src/wifi_rn131.o
+LOAD /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a
+OUTPUT(DP.elf elf32-littlearm)
+
+.ARM.attributes
+                0x0000000000000000       0x2e
+ .ARM.attributes
+                0x0000000000000000       0x1b src/_cmsis/startup_MKL28Z7.o
+ .ARM.attributes
+                0x000000000000001b       0x32 src/_cmsis/system_MKL28Z7.o
+ .ARM.attributes
+                0x000000000000004d       0x32 src/_system/fcf.o
+ .ARM.attributes
+                0x000000000000007f       0x1b src/_system/hardfault.o
+ .ARM.attributes
+                0x000000000000009a       0x1b src/_system/intmux.o
+ .ARM.attributes
+                0x00000000000000b5       0x1b src/_system/mem.o
+ .ARM.attributes
+                0x00000000000000d0       0x1b src/_system/nmi.o
+ .ARM.attributes
+                0x00000000000000eb       0x1b src/_system/tstmr.o
+ .ARM.attributes
+                0x0000000000000106       0x32 src/_system/wdog.o
+ .ARM.attributes
+                0x0000000000000138       0x32 src/_util/LPUARTHandler.o
+ .ARM.attributes
+                0x000000000000016a       0x32 src/_util/queue.o
+ .ARM.attributes
+                0x000000000000019c       0x32 src/_util/usb/USBkhci.o
+ .ARM.attributes
+                0x00000000000001ce       0x32 src/board.o
+ .ARM.attributes
+                0x0000000000000200       0x32 src/main.o
+ .ARM.attributes
+                0x0000000000000232       0x32 src/wifi_rn131.o
+ .ARM.attributes
+                0x0000000000000264       0x1e /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x0000000000000282       0x1e /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_divsi3.o)
+ .ARM.attributes
+                0x00000000000002a0       0x1e /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_dvmd_tls.o)
+
+.comment        0x0000000000000000       0x7c
+ .comment       0x0000000000000000       0x7c src/_cmsis/system_MKL28Z7.o
+                                         0x7d (size before relaxing)
+ .comment       0x000000000000007c       0x7d src/_system/fcf.o
+ .comment       0x000000000000007c       0x7d src/_system/wdog.o
+ .comment       0x000000000000007c       0x7d src/_util/LPUARTHandler.o
+ .comment       0x000000000000007c       0x7d src/_util/queue.o
+ .comment       0x000000000000007c       0x7d src/_util/usb/USBkhci.o
+ .comment       0x000000000000007c       0x7d src/board.o
+ .comment       0x000000000000007c       0x7d src/main.o
+ .comment       0x000000000000007c       0x7d src/wifi_rn131.o
+
+.debug_line     0x0000000000000000     0x1635
+ .debug_line    0x0000000000000000       0x7b src/_cmsis/startup_MKL28Z7.o
+ .debug_line    0x000000000000007b      0x17f src/_cmsis/system_MKL28Z7.o
+ .debug_line    0x00000000000001fa       0xb7 src/_system/fcf.o
+ .debug_line    0x00000000000002b1       0x4b src/_system/hardfault.o
+ .debug_line    0x00000000000002fc       0x5a src/_system/intmux.o
+ .debug_line    0x0000000000000356       0xb0 src/_system/mem.o
+ .debug_line    0x0000000000000406       0x44 src/_system/nmi.o
+ .debug_line    0x000000000000044a       0x4f src/_system/tstmr.o
+ .debug_line    0x0000000000000499      0x1bd src/_system/wdog.o
+ .debug_line    0x0000000000000656      0x2b2 src/_util/LPUARTHandler.o
+ .debug_line    0x0000000000000908      0x150 src/_util/queue.o
+ .debug_line    0x0000000000000a58      0x417 src/_util/usb/USBkhci.o
+ .debug_line    0x0000000000000e6f      0x293 src/board.o
+ .debug_line    0x0000000000001102      0x2e1 src/main.o
+ .debug_line    0x00000000000013e3      0x252 src/wifi_rn131.o
+
+.debug_info     0x0000000000000000     0x3343
+ .debug_info    0x0000000000000000       0x7f src/_cmsis/startup_MKL28Z7.o
+ .debug_info    0x000000000000007f      0x2e3 src/_cmsis/system_MKL28Z7.o
+ .debug_info    0x0000000000000362       0xa5 src/_system/fcf.o
+ .debug_info    0x0000000000000407       0x7e src/_system/hardfault.o
+ .debug_info    0x0000000000000485       0x7b src/_system/intmux.o
+ .debug_info    0x0000000000000500       0x74 src/_system/mem.o
+ .debug_info    0x0000000000000574       0x78 src/_system/nmi.o
+ .debug_info    0x00000000000005ec       0x7a src/_system/tstmr.o
+ .debug_info    0x0000000000000666      0x224 src/_system/wdog.o
+ .debug_info    0x000000000000088a      0x981 src/_util/LPUARTHandler.o
+ .debug_info    0x000000000000120b      0x369 src/_util/queue.o
+ .debug_info    0x0000000000001574     0x114b src/_util/usb/USBkhci.o
+ .debug_info    0x00000000000026bf      0x73b src/board.o
+ .debug_info    0x0000000000002dfa      0x341 src/main.o
+ .debug_info    0x000000000000313b      0x208 src/wifi_rn131.o
+
+.debug_abbrev   0x0000000000000000      0xd4d
+ .debug_abbrev  0x0000000000000000       0x12 src/_cmsis/startup_MKL28Z7.o
+ .debug_abbrev  0x0000000000000012       0xed src/_cmsis/system_MKL28Z7.o
+ .debug_abbrev  0x00000000000000ff       0x60 src/_system/fcf.o
+ .debug_abbrev  0x000000000000015f       0x14 src/_system/hardfault.o
+ .debug_abbrev  0x0000000000000173       0x14 src/_system/intmux.o
+ .debug_abbrev  0x0000000000000187       0x12 src/_system/mem.o
+ .debug_abbrev  0x0000000000000199       0x14 src/_system/nmi.o
+ .debug_abbrev  0x00000000000001ad       0x14 src/_system/tstmr.o
+ .debug_abbrev  0x00000000000001c1      0x171 src/_system/wdog.o
+ .debug_abbrev  0x0000000000000332      0x22d src/_util/LPUARTHandler.o
+ .debug_abbrev  0x000000000000055f      0x118 src/_util/queue.o
+ .debug_abbrev  0x0000000000000677      0x293 src/_util/usb/USBkhci.o
+ .debug_abbrev  0x000000000000090a      0x1d5 src/board.o
+ .debug_abbrev  0x0000000000000adf      0x14b src/main.o
+ .debug_abbrev  0x0000000000000c2a      0x123 src/wifi_rn131.o
+
+.debug_aranges  0x0000000000000000      0x308
+ .debug_aranges
+                0x0000000000000000       0x28 src/_cmsis/startup_MKL28Z7.o
+ .debug_aranges
+                0x0000000000000028       0x28 src/_cmsis/system_MKL28Z7.o
+ .debug_aranges
+                0x0000000000000050       0x18 src/_system/fcf.o
+ .debug_aranges
+                0x0000000000000068       0x20 src/_system/hardfault.o
+ .debug_aranges
+                0x0000000000000088       0x20 src/_system/intmux.o
+ .debug_aranges
+                0x00000000000000a8       0x40 src/_system/mem.o
+ .debug_aranges
+                0x00000000000000e8       0x20 src/_system/nmi.o
+ .debug_aranges
+                0x0000000000000108       0x20 src/_system/tstmr.o
+ .debug_aranges
+                0x0000000000000128       0x20 src/_system/wdog.o
+ .debug_aranges
+                0x0000000000000148       0x68 src/_util/LPUARTHandler.o
+ .debug_aranges
+                0x00000000000001b0       0x40 src/_util/queue.o
+ .debug_aranges
+                0x00000000000001f0       0x48 src/_util/usb/USBkhci.o
+ .debug_aranges
+                0x0000000000000238       0x60 src/board.o
+ .debug_aranges
+                0x0000000000000298       0x40 src/main.o
+ .debug_aranges
+                0x00000000000002d8       0x30 src/wifi_rn131.o
+
+.debug_ranges   0x0000000000000000      0x1f8
+ .debug_ranges  0x0000000000000000       0x20 src/_cmsis/startup_MKL28Z7.o
+ .debug_ranges  0x0000000000000020       0x18 src/_cmsis/system_MKL28Z7.o
+ .debug_ranges  0x0000000000000038       0x38 src/_system/mem.o
+ .debug_ranges  0x0000000000000070       0x10 src/_system/wdog.o
+ .debug_ranges  0x0000000000000080       0x70 src/_util/LPUARTHandler.o
+ .debug_ranges  0x00000000000000f0       0x30 src/_util/queue.o
+ .debug_ranges  0x0000000000000120       0x38 src/_util/usb/USBkhci.o
+ .debug_ranges  0x0000000000000158       0x50 src/board.o
+ .debug_ranges  0x00000000000001a8       0x30 src/main.o
+ .debug_ranges  0x00000000000001d8       0x20 src/wifi_rn131.o
+
+.debug_macro    0x0000000000000000     0xc6e7
+ .debug_macro   0x0000000000000000       0x70 src/_cmsis/system_MKL28Z7.o
+ .debug_macro   0x0000000000000070      0x8a4 src/_cmsis/system_MKL28Z7.o
+ .debug_macro   0x0000000000000914       0x3f src/_cmsis/system_MKL28Z7.o
+ .debug_macro   0x0000000000000953      0x34e src/_cmsis/system_MKL28Z7.o
+ .debug_macro   0x0000000000000ca1       0x34 src/_cmsis/system_MKL28Z7.o
+ .debug_macro   0x0000000000000cd5       0x26 src/_cmsis/system_MKL28Z7.o
+ .debug_macro   0x0000000000000cfb      0x44f src/_cmsis/system_MKL28Z7.o
+ .debug_macro   0x000000000000114a      0x1c0 src/_cmsis/system_MKL28Z7.o
+ .debug_macro   0x000000000000130a     0xaac0 src/_cmsis/system_MKL28Z7.o
+ .debug_macro   0x000000000000bdca       0x2d src/_system/fcf.o
+ .debug_macro   0x000000000000bdf7       0x94 src/_system/fcf.o
+ .debug_macro   0x000000000000be8b       0x83 src/_system/wdog.o
+ .debug_macro   0x000000000000bf0e       0x1c src/_system/wdog.o
+ .debug_macro   0x000000000000bf2a       0x91 src/_util/LPUARTHandler.o
+ .debug_macro   0x000000000000bfbb       0x22 src/_util/LPUARTHandler.o
+ .debug_macro   0x000000000000bfdd       0x10 src/_util/LPUARTHandler.o
+ .debug_macro   0x000000000000bfed       0x16 src/_util/LPUARTHandler.o
+ .debug_macro   0x000000000000c003       0x3d src/_util/queue.o
+ .debug_macro   0x000000000000c040      0x183 src/_util/usb/USBkhci.o
+ .debug_macro   0x000000000000c1c3       0x9a src/board.o
+ .debug_macro   0x000000000000c25d       0x70 src/board.o
+ .debug_macro   0x000000000000c2cd       0x70 src/board.o
+ .debug_macro   0x000000000000c33d       0xfa src/board.o
+ .debug_macro   0x000000000000c437       0xe4 src/main.o
+ .debug_macro   0x000000000000c51b       0x28 src/main.o
+ .debug_macro   0x000000000000c543      0x100 src/main.o
+ .debug_macro   0x000000000000c643       0xa4 src/wifi_rn131.o
+
+.debug_str      0x0000000000000000    0x5b832
+ .debug_str     0x0000000000000000    0x558e8 src/_cmsis/system_MKL28Z7.o
+                                      0x55bba (size before relaxing)
+ .debug_str     0x00000000000558e8      0x25a src/_system/fcf.o
+                                       0x31da (size before relaxing)
+ .debug_str     0x0000000000055b42      0x1e6 src/_system/wdog.o
+                                      0x55c7c (size before relaxing)
+ .debug_str     0x0000000000055d28      0x92d src/_util/LPUARTHandler.o
+                                      0x56405 (size before relaxing)
+ .debug_str     0x0000000000056655       0xda src/_util/queue.o
+                                       0x322a (size before relaxing)
+ .debug_str     0x000000000005672f     0x43e0 src/_util/usb/USBkhci.o
+                                      0x59ff6 (size before relaxing)
+ .debug_str     0x000000000005ab0f      0xb50 src/board.o
+                                      0x56aa9 (size before relaxing)
+ .debug_str     0x000000000005b65f      0x190 src/main.o
+                                      0x5691f (size before relaxing)
+ .debug_str     0x000000000005b7ef       0x43 src/wifi_rn131.o
+                                      0x55d22 (size before relaxing)
+
+.debug_frame    0x0000000000000000      0x5bc
+ .debug_frame   0x0000000000000000       0x48 src/_cmsis/system_MKL28Z7.o
+ .debug_frame   0x0000000000000048       0x30 src/_system/wdog.o
+ .debug_frame   0x0000000000000078      0x148 src/_util/LPUARTHandler.o
+ .debug_frame   0x00000000000001c0       0xb0 src/_util/queue.o
+ .debug_frame   0x0000000000000270       0xd0 src/_util/usb/USBkhci.o
+ .debug_frame   0x0000000000000340      0x120 src/board.o
+ .debug_frame   0x0000000000000460       0xac src/main.o
+ .debug_frame   0x000000000000050c       0x70 src/wifi_rn131.o
+ .debug_frame   0x000000000000057c       0x20 /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_udivsi3.o)
+ .debug_frame   0x000000000000059c       0x20 /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_divsi3.o)
+
+Cross Reference Table
+
+Symbol                                            File
+ADC0_IRQHandler                                   src/_cmsis/startup_MKL28Z7.o
+BSS_BEGIN                                         src/_cmsis/startup_MKL28Z7.o
+BSS_END                                           src/_cmsis/startup_MKL28Z7.o
+Board_Init                                        src/board.o
+                                                  src/main.o
+Board_MCUBTN_Get                                  src/board.o
+                                                  src/main.o
+Board_MCULED_Set                                  src/board.o
+                                                  src/main.o
+CMP0_IRQHandler                                   src/_cmsis/startup_MKL28Z7.o
+CMP1_IRQHandler                                   src/_cmsis/startup_MKL28Z7.o
+CTI0_DMA0_Error_IRQHandler                        src/_cmsis/startup_MKL28Z7.o
+DAC0_IRQHandler                                   src/_cmsis/startup_MKL28Z7.o
+DATA_BEGIN                                        src/_cmsis/startup_MKL28Z7.o
+DATA_END                                          src/_cmsis/startup_MKL28Z7.o
+DATA_INIT                                         src/_cmsis/startup_MKL28Z7.o
+DMA0_04_IRQHandler                                src/_cmsis/startup_MKL28Z7.o
+DMA0_15_IRQHandler                                src/_cmsis/startup_MKL28Z7.o
+DMA0_26_IRQHandler                                src/_cmsis/startup_MKL28Z7.o
+DMA0_37_IRQHandler                                src/_cmsis/startup_MKL28Z7.o
+EMVSIM0_IRQHandler                                src/_cmsis/startup_MKL28Z7.o
+FLEXIO0_IRQHandler                                src/_cmsis/startup_MKL28Z7.o
+FTFA_IRQHandler                                   src/_cmsis/startup_MKL28Z7.o
+HardFault_Handler                                 src/_system/hardfault.o
+                                                  src/_cmsis/startup_MKL28Z7.o
+I2S0_IRQHandler                                   src/_cmsis/startup_MKL28Z7.o
+INTMUX0_0_IRQHandler                              src/_system/intmux.o
+                                                  src/_cmsis/startup_MKL28Z7.o
+INTMUX0_1_IRQHandler                              src/_system/intmux.o
+                                                  src/_cmsis/startup_MKL28Z7.o
+INTMUX0_2_IRQHandler                              src/_system/intmux.o
+                                                  src/_cmsis/startup_MKL28Z7.o
+INTMUX0_3_IRQHandler                              src/_system/intmux.o
+                                                  src/_cmsis/startup_MKL28Z7.o
+LLWU0_IRQHandler                                  src/_cmsis/startup_MKL28Z7.o
+LPI2C0_IRQHandler                                 src/_cmsis/startup_MKL28Z7.o
+LPI2C1_IRQHandler                                 src/_cmsis/startup_MKL28Z7.o
+LPI2C2_IRQHandler                                 src/_cmsis/startup_MKL28Z7.o
+LPIT0_IRQHandler                                  src/_cmsis/startup_MKL28Z7.o
+LPSPI0_IRQHandler                                 src/_cmsis/startup_MKL28Z7.o
+LPSPI1_IRQHandler                                 src/_cmsis/startup_MKL28Z7.o
+LPSPI2_IRQHandler                                 src/_cmsis/startup_MKL28Z7.o
+LPTMR0_IRQHandler                                 src/_cmsis/startup_MKL28Z7.o
+LPTMR1_IRQHandler                                 src/_cmsis/startup_MKL28Z7.o
+LPUART0_IRQHandler                                src/_util/LPUARTHandler.o
+                                                  src/_cmsis/startup_MKL28Z7.o
+LPUART0_callback                                  src/main.o
+LPUART1_IRQHandler                                src/_util/LPUARTHandler.o
+                                                  src/_cmsis/startup_MKL28Z7.o
+LPUART2_IRQHandler                                src/_util/LPUARTHandler.o
+                                                  src/_cmsis/startup_MKL28Z7.o
+LPUART2_callback                                  src/main.o
+LPUARTHandler_Init                                src/_util/LPUARTHandler.o
+                                                  src/wifi_rn131.o
+LPUARTHandler_SendData                            src/_util/LPUARTHandler.o
+                                                  src/wifi_rn131.o
+LPUARTHandler_SendLine                            src/_util/LPUARTHandler.o
+                                                  src/wifi_rn131.o
+                                                  src/main.o
+LPURTHandler_ReadLine                             src/_util/LPUARTHandler.o
+                                                  src/wifi_rn131.o
+                                                  src/main.o
+NMI_Handler                                       src/_system/nmi.o
+                                                  src/_cmsis/startup_MKL28Z7.o
+PMC_IRQHandler                                    src/_cmsis/startup_MKL28Z7.o
+PORTA_IRQHandler                                  src/_cmsis/startup_MKL28Z7.o
+PORTB_IRQHandler                                  src/_cmsis/startup_MKL28Z7.o
+PORTC_IRQHandler                                  src/_cmsis/startup_MKL28Z7.o
+PORTD_IRQHandler                                  src/_cmsis/startup_MKL28Z7.o
+PORTE_IRQHandler                                  src/_cmsis/startup_MKL28Z7.o
+PendSV_Handler                                    src/_cmsis/startup_MKL28Z7.o
+Queue_Dequeue                                     src/_util/queue.o
+                                                  src/_util/LPUARTHandler.o
+Queue_Enqueue                                     src/_util/queue.o
+                                                  src/_util/LPUARTHandler.o
+Queue_Init                                        src/_util/queue.o
+                                                  src/_util/LPUARTHandler.o
+Queue_getFreeCount                                src/_util/queue.o
+Queue_getUsedCount                                src/_util/queue.o
+                                                  src/_util/LPUARTHandler.o
+RCM_IRQHandler                                    src/_cmsis/startup_MKL28Z7.o
+RTC_IRQHandler                                    src/_cmsis/startup_MKL28Z7.o
+RTC_Seconds_IRQHandler                            src/_cmsis/startup_MKL28Z7.o
+Reserved32_IRQHandler                             src/_cmsis/startup_MKL28Z7.o
+Reserved49_IRQHandler                             src/_cmsis/startup_MKL28Z7.o
+Reserved50_IRQHandler                             src/_cmsis/startup_MKL28Z7.o
+Reserved51_IRQHandler                             src/_cmsis/startup_MKL28Z7.o
+Reserved67_IRQHandler                             src/_cmsis/startup_MKL28Z7.o
+Reserved68_IRQHandler                             src/_cmsis/startup_MKL28Z7.o
+Reserved69_IRQHandler                             src/_cmsis/startup_MKL28Z7.o
+Reserved70_IRQHandler                             src/_cmsis/startup_MKL28Z7.o
+Reserved71_IRQHandler                             src/_cmsis/startup_MKL28Z7.o
+Reserved72_IRQHandler                             src/_cmsis/startup_MKL28Z7.o
+Reserved73_IRQHandler                             src/_cmsis/startup_MKL28Z7.o
+Reserved74_IRQHandler                             src/_cmsis/startup_MKL28Z7.o
+Reserved75_IRQHandler                             src/_cmsis/startup_MKL28Z7.o
+Reserved76_IRQHandler                             src/_cmsis/startup_MKL28Z7.o
+Reserved77_IRQHandler                             src/_cmsis/startup_MKL28Z7.o
+Reserved78_IRQHandler                             src/_cmsis/startup_MKL28Z7.o
+Reserved79_IRQHandler                             src/_cmsis/startup_MKL28Z7.o
+Reset_Handler                                     src/_cmsis/startup_MKL28Z7.o
+SCG_IRQHandler                                    src/_cmsis/startup_MKL28Z7.o
+STACK_BOTTOM                                      src/_cmsis/startup_MKL28Z7.o
+STACK_TOP                                         src/_cmsis/startup_MKL28Z7.o
+SVCall_Handler                                    src/_cmsis/startup_MKL28Z7.o
+SYSTEM_Init                                       src/main.o
+SysTick_Handler                                   src/_cmsis/startup_MKL28Z7.o
+SystemCoreClock                                   src/_cmsis/system_MKL28Z7.o
+SystemCoreClockUpdate                             src/_cmsis/system_MKL28Z7.o
+                                                  src/_cmsis/startup_MKL28Z7.o
+SystemInit                                        src/_cmsis/system_MKL28Z7.o
+                                                  src/_cmsis/startup_MKL28Z7.o
+TPM0_IRQHandler                                   src/_cmsis/startup_MKL28Z7.o
+TPM1_IRQHandler                                   src/_cmsis/startup_MKL28Z7.o
+TPM2_IRQHandler                                   src/_cmsis/startup_MKL28Z7.o
+TRNG_IRQHandler                                   src/_cmsis/startup_MKL28Z7.o
+TSI0_IRQHandler                                   src/_cmsis/startup_MKL28Z7.o
+USB0_IRQHandler                                   src/_util/usb/USBkhci.o
+                                                  src/_cmsis/startup_MKL28Z7.o
+USB_devInit                                       src/_util/usb/USB.o
+USBkhci_devControl                                src/_util/usb/USBkhci.o
+USBkhci_devInit                                   src/_util/usb/USBkhci.o
+WDOG0_IRQHandler                                  src/_cmsis/startup_MKL28Z7.o
+__aeabi_idiv                                      /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_divsi3.o)
+                                                  src/main.o
+__aeabi_idiv0                                     /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_dvmd_tls.o)
+                                                  /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_divsi3.o)
+                                                  /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_udivsi3.o)
+__aeabi_idivmod                                   /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_divsi3.o)
+                                                  src/_util/queue.o
+__aeabi_ldiv0                                     /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_dvmd_tls.o)
+__aeabi_uidiv                                     /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_udivsi3.o)
+__aeabi_uidivmod                                  /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_udivsi3.o)
+                                                  src/_util/queue.o
+__divsi3                                          /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_divsi3.o)
+__udivsi3                                         /opt/Atollic_TrueSTUDIO_for_ARM_x86_64_8.0.0/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv6-m/libgcc.a(_udivsi3.o)
+buff1                                             src/main.o
+buff2                                             src/main.o
+clkout_set                                        src/_system/clkout.o
+fcf                                               src/_system/fcf.o
+main                                              src/main.o
+                                                  src/_cmsis/startup_MKL28Z7.o
+memcmp                                            src/_system/mem.o
+memcpy                                            src/_system/mem.o
+                                                  src/_cmsis/startup_MKL28Z7.o
+memmove                                           src/_system/mem.o
+memset                                            src/_system/mem.o
+                                                  src/_cmsis/startup_MKL28Z7.o
+rn131_Init                                        src/wifi_rn131.o
+                                                  src/main.o
+rn131_test                                        src/wifi_rn131.o
+                                                  src/main.o
+tstmr_get_val                                     src/_system/tstmr.o
+                                                  src/_system/wdog.o
+wdog_set                                          src/_system/wdog.o
+                                                  src/main.o

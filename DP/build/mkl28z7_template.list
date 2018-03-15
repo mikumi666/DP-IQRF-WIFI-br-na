@@ -1,0 +1,746 @@
+
+D:\depot\code\attolic\stage\mkl28z7_template\build\mkl28z7_template.elf:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .vectab       00000140  00000000  00000000  00010000  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  1 .fcf          00000010  00000400  00000400  00010400  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  2 .text         0000037c  00000410  00000410  00010410  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .stack        00000800  1fff8000  1fff8000  00018000  2**0
+                  ALLOC
+  4 .bss          00000004  1fff8800  0000078c  00018800  2**2
+                  ALLOC
+  5 .ARM.attributes 0000002e  00000000  00000000  0001078c  2**0
+                  CONTENTS, READONLY
+  6 .comment      0000007c  00000000  00000000  000107ba  2**0
+                  CONTENTS, READONLY
+  7 .debug_line   000007ac  00000000  00000000  00010836  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_info   000009a4  00000000  00000000  00010fe2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_abbrev 00000404  00000000  00000000  00011986  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_aranges 00000170  00000000  00000000  00011d90  2**3
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000098  00000000  00000000  00011f00  2**3
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_macro  0000bfa3  00000000  00000000  00011f98  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_str    00055d48  00000000  00000000  0001df3b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_frame  000000c0  00000000  00000000  00073c84  2**2
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000410 <Reset_Handler>:
+	.section .text.Reset_Handler, "ax", %progbits
+	.type Reset_Handler, %function
+	.thumb_func
+Reset_Handler:
+
+	bl SystemInit
+ 410:	f000 f828 	bl	464 <SystemInit>
+
+	/* data section init */
+
+	ldr r0, =DATA_BEGIN
+ 414:	480b      	ldr	r0, [pc, #44]	; (444 <stop+0x4>)
+	ldr r1, =DATA_INIT
+ 416:	490c      	ldr	r1, [pc, #48]	; (448 <stop+0x8>)
+	ldr r2, =DATA_END
+ 418:	4a0c      	ldr	r2, [pc, #48]	; (44c <stop+0xc>)
+	subs r2, r0
+ 41a:	1a12      	subs	r2, r2, r0
+	bl memcpy
+ 41c:	f000 f8e6 	bl	5ec <memcpy>
+
+	/* bss section zeroization */
+
+	ldr r0, =BSS_BEGIN
+ 420:	480b      	ldr	r0, [pc, #44]	; (450 <stop+0x10>)
+	ldr r1, =0x00
+ 422:	2100      	movs	r1, #0
+	ldr r2, =BSS_END
+ 424:	4a0b      	ldr	r2, [pc, #44]	; (454 <stop+0x14>)
+	subs r2, r0
+ 426:	1a12      	subs	r2, r2, r0
+	bl memset
+ 428:	f000 f8e7 	bl	5fa <memset>
+
+	/* stack pattern fill */
+	/* this is for debugging purposes */
+
+	ldr r0, =STACK_BOTTOM
+ 42c:	480a      	ldr	r0, [pc, #40]	; (458 <stop+0x18>)
+	ldr r1, =0xA5
+ 42e:	21a5      	movs	r1, #165	; 0xa5
+	ldr r2, =STACK_TOP
+ 430:	4a0a      	ldr	r2, [pc, #40]	; (45c <stop+0x1c>)
+	subs r2, r0
+ 432:	1a12      	subs	r2, r2, r0
+	bl memset
+ 434:	f000 f8e1 	bl	5fa <memset>
+
+	bl SystemCoreClockUpdate
+ 438:	f000 f8b4 	bl	5a4 <SystemCoreClockUpdate>
+
+	bl main
+ 43c:	f000 f988 	bl	750 <main>
+
+00000440 <stop>:
+
+stop:
+	b stop
+ 440:	e7fe      	b.n	440 <stop>
+ 442:	0000      	.short	0x0000
+	ldr r0, =DATA_BEGIN
+ 444:	1fff8800 	.word	0x1fff8800
+	ldr r1, =DATA_INIT
+ 448:	0000078c 	.word	0x0000078c
+	ldr r2, =DATA_END
+ 44c:	1fff8800 	.word	0x1fff8800
+	ldr r0, =BSS_BEGIN
+ 450:	1fff8800 	.word	0x1fff8800
+	ldr r2, =BSS_END
+ 454:	1fff8804 	.word	0x1fff8804
+	ldr r0, =STACK_BOTTOM
+ 458:	1fff8000 	.word	0x1fff8000
+	ldr r2, =STACK_TOP
+ 45c:	1fff8800 	.word	0x1fff8800
+
+00000460 <ADC0_IRQHandler>:
+	.section .text.Default_Handler, "ax", %progbits
+	.type Default_Handler, %function
+	.thumb_func
+Default_Handler:
+
+	bkpt
+ 460:	be00      	bkpt	0x0000
+	b Default_Handler
+ 462:	e7fd      	b.n	460 <ADC0_IRQHandler>
+
+00000464 <SystemInit>:
+#include "MKL28Z7.h"
+
+volatile uint32_t SystemCoreClock;
+
+void SystemInit(void)
+{
+ 464:	b580      	push	{r7, lr}
+ 466:	af00      	add	r7, sp, #0
+	WDOG0->TOVAL = WDOG_TOVAL_VAL_BOOT;
+ 468:	4b45      	ldr	r3, [pc, #276]	; (580 <SystemInit+0x11c>)
+ 46a:	22fa      	movs	r2, #250	; 0xfa
+ 46c:	0092      	lsls	r2, r2, #2
+ 46e:	609a      	str	r2, [r3, #8]
+	WDOG0->CS = WDOG_CS_CMD32EN_MASK | WDOG_CS_PRES_VAL_BOOT | WDOG_CS_CLK_VAL_BOOT |
+ 470:	4b43      	ldr	r3, [pc, #268]	; (580 <SystemInit+0x11c>)
+ 472:	4a44      	ldr	r2, [pc, #272]	; (584 <SystemInit+0x120>)
+ 474:	601a      	str	r2, [r3, #0]
+				WDOG_CS_EN_MASK | WDOG_CS_UPDATE_MASK;
+
+	SCG->SOSCDIV = SCG_SOSCDIV_DIV3_VAL | SCG_SOSCDIV_DIV1_VAL;
+ 476:	4944      	ldr	r1, [pc, #272]	; (588 <SystemInit+0x124>)
+ 478:	2382      	movs	r3, #130	; 0x82
+ 47a:	005b      	lsls	r3, r3, #1
+ 47c:	2280      	movs	r2, #128	; 0x80
+ 47e:	0252      	lsls	r2, r2, #9
+ 480:	50ca      	str	r2, [r1, r3]
+	SCG->SOSCCFG = SCG_SOSCCFG_SCXP_VAL | SCG_SOSCCFG_RANGE_VAL | SCG_SOSCCFG_EREFS_MASK;
+ 482:	4941      	ldr	r1, [pc, #260]	; (588 <SystemInit+0x124>)
+ 484:	2384      	movs	r3, #132	; 0x84
+ 486:	005b      	lsls	r3, r3, #1
+ 488:	228a      	movs	r2, #138	; 0x8a
+ 48a:	0052      	lsls	r2, r2, #1
+ 48c:	50ca      	str	r2, [r1, r3]
+	SCG->SOSCCSR = SCG_SOSCCSR_SOSCERCLKEN_MASK |
+ 48e:	4a3e      	ldr	r2, [pc, #248]	; (588 <SystemInit+0x124>)
+ 490:	2380      	movs	r3, #128	; 0x80
+ 492:	005b      	lsls	r3, r3, #1
+ 494:	210f      	movs	r1, #15
+ 496:	50d1      	str	r1, [r2, r3]
+					SCG_SOSCCSR_SOSCLPEN_MASK |
+					SCG_SOSCCSR_SOSCSTEN_MASK |
+					SCG_SOSCCSR_SOSCEN_MASK;
+	while (!(SCG->SOSCCSR & SCG_SOSCCSR_SOSCVLD_MASK));
+ 498:	46c0      	nop			; (mov r8, r8)
+ 49a:	4a3b      	ldr	r2, [pc, #236]	; (588 <SystemInit+0x124>)
+ 49c:	2380      	movs	r3, #128	; 0x80
+ 49e:	005b      	lsls	r3, r3, #1
+ 4a0:	58d2      	ldr	r2, [r2, r3]
+ 4a2:	2380      	movs	r3, #128	; 0x80
+ 4a4:	045b      	lsls	r3, r3, #17
+ 4a6:	4013      	ands	r3, r2
+ 4a8:	d0f7      	beq.n	49a <SystemInit+0x36>
+
+
+	SCG->FIRCDIV = SCG_FIRCDIV_DIV3_VAL | SCG_FIRCDIV_DIV1_VAL;
+ 4aa:	4a37      	ldr	r2, [pc, #220]	; (588 <SystemInit+0x124>)
+ 4ac:	23c1      	movs	r3, #193	; 0xc1
+ 4ae:	009b      	lsls	r3, r3, #2
+ 4b0:	4936      	ldr	r1, [pc, #216]	; (58c <SystemInit+0x128>)
+ 4b2:	50d1      	str	r1, [r2, r3]
+	SCG->FIRCCFG = SCG_FIRCCFG_RANGE_VAL;
+ 4b4:	4a34      	ldr	r2, [pc, #208]	; (588 <SystemInit+0x124>)
+ 4b6:	23c2      	movs	r3, #194	; 0xc2
+ 4b8:	009b      	lsls	r3, r3, #2
+ 4ba:	2100      	movs	r1, #0
+ 4bc:	50d1      	str	r1, [r2, r3]
+	SCG->FIRCCSR = SCG_FIRCCSR_FIRCLPEN_MASK |
+ 4be:	4a32      	ldr	r2, [pc, #200]	; (588 <SystemInit+0x124>)
+ 4c0:	23c0      	movs	r3, #192	; 0xc0
+ 4c2:	009b      	lsls	r3, r3, #2
+ 4c4:	2107      	movs	r1, #7
+ 4c6:	50d1      	str	r1, [r2, r3]
+					SCG_FIRCCSR_FIRCSTEN_MASK |
+					SCG_FIRCCSR_FIRCEN_MASK;
+	while (!(SCG->FIRCCSR & SCG_FIRCCSR_FIRCVLD_MASK));
+ 4c8:	46c0      	nop			; (mov r8, r8)
+ 4ca:	4a2f      	ldr	r2, [pc, #188]	; (588 <SystemInit+0x124>)
+ 4cc:	23c0      	movs	r3, #192	; 0xc0
+ 4ce:	009b      	lsls	r3, r3, #2
+ 4d0:	58d2      	ldr	r2, [r2, r3]
+ 4d2:	2380      	movs	r3, #128	; 0x80
+ 4d4:	045b      	lsls	r3, r3, #17
+ 4d6:	4013      	ands	r3, r2
+ 4d8:	d0f7      	beq.n	4ca <SystemInit+0x66>
+
+	SCG->SPLLDIV = SCG_SPLLDIV_DIV3_VAL | SCG_SPLLDIV_DIV1_VAL;
+ 4da:	492b      	ldr	r1, [pc, #172]	; (588 <SystemInit+0x124>)
+ 4dc:	4a2c      	ldr	r2, [pc, #176]	; (590 <SystemInit+0x12c>)
+ 4de:	23c0      	movs	r3, #192	; 0xc0
+ 4e0:	029b      	lsls	r3, r3, #10
+ 4e2:	508b      	str	r3, [r1, r2]
+	SCG->SPLLCFG = SCG_SPLLCFG_MULT_VAL | SCG_SPLLCFG_PREDIV_VAL | SCG_SPLLCFG_SOURCE_MASK;
+ 4e4:	4a28      	ldr	r2, [pc, #160]	; (588 <SystemInit+0x124>)
+ 4e6:	23c1      	movs	r3, #193	; 0xc1
+ 4e8:	00db      	lsls	r3, r3, #3
+ 4ea:	492a      	ldr	r1, [pc, #168]	; (594 <SystemInit+0x130>)
+ 4ec:	50d1      	str	r1, [r2, r3]
+	SCG->SPLLCSR = SCG_SPLLCSR_SPLLERR_MASK |
+ 4ee:	4a26      	ldr	r2, [pc, #152]	; (588 <SystemInit+0x124>)
+ 4f0:	23c0      	movs	r3, #192	; 0xc0
+ 4f2:	00db      	lsls	r3, r3, #3
+ 4f4:	4928      	ldr	r1, [pc, #160]	; (598 <SystemInit+0x134>)
+ 4f6:	50d1      	str	r1, [r2, r3]
+					SCG_SPLLCSR_SPLLCMRE_MASK |
+					SCG_SPLLCSR_SPLLCM_MASK |
+					SCG_SPLLCSR_SPLLSTEN_MASK |
+					SCG_SPLLCSR_SPLLEN_MASK;
+	while (!(SCG->SPLLCSR & SCG_SPLLCSR_SPLLVLD_MASK));
+ 4f8:	46c0      	nop			; (mov r8, r8)
+ 4fa:	4a23      	ldr	r2, [pc, #140]	; (588 <SystemInit+0x124>)
+ 4fc:	23c0      	movs	r3, #192	; 0xc0
+ 4fe:	00db      	lsls	r3, r3, #3
+ 500:	58d2      	ldr	r2, [r2, r3]
+ 502:	2380      	movs	r3, #128	; 0x80
+ 504:	045b      	lsls	r3, r3, #17
+ 506:	4013      	ands	r3, r2
+ 508:	d0f7      	beq.n	4fa <SystemInit+0x96>
+
+	SCG->RCCR = SCG_CCRCSR_SCS_VAL_SPLL | SCG_CCRCSR_DIVCORE_RUN_VAL | SCG_CCRCSR_DIVSLOW_RUN_VAL;
+ 50a:	4b1f      	ldr	r3, [pc, #124]	; (588 <SystemInit+0x124>)
+ 50c:	4a23      	ldr	r2, [pc, #140]	; (59c <SystemInit+0x138>)
+ 50e:	615a      	str	r2, [r3, #20]
+	while ((SCG->CSR & SCG_CSR_SCS_MASK) != SCG_CCRCSR_SCS_VAL_SPLL );
+ 510:	46c0      	nop			; (mov r8, r8)
+ 512:	4b1d      	ldr	r3, [pc, #116]	; (588 <SystemInit+0x124>)
+ 514:	691a      	ldr	r2, [r3, #16]
+ 516:	23f0      	movs	r3, #240	; 0xf0
+ 518:	051b      	lsls	r3, r3, #20
+ 51a:	401a      	ands	r2, r3
+ 51c:	23c0      	movs	r3, #192	; 0xc0
+ 51e:	04db      	lsls	r3, r3, #19
+ 520:	429a      	cmp	r2, r3
+ 522:	d1f6      	bne.n	512 <SystemInit+0xae>
+
+	SCG->SIRCCSR = 0;
+ 524:	4a18      	ldr	r2, [pc, #96]	; (588 <SystemInit+0x124>)
+ 526:	2380      	movs	r3, #128	; 0x80
+ 528:	009b      	lsls	r3, r3, #2
+ 52a:	2100      	movs	r1, #0
+ 52c:	50d1      	str	r1, [r2, r3]
+	while (SCG->SIRCCSR & SCG_SIRCCSR_SIRCVLD_MASK);
+ 52e:	46c0      	nop			; (mov r8, r8)
+ 530:	4a15      	ldr	r2, [pc, #84]	; (588 <SystemInit+0x124>)
+ 532:	2380      	movs	r3, #128	; 0x80
+ 534:	009b      	lsls	r3, r3, #2
+ 536:	58d2      	ldr	r2, [r2, r3]
+ 538:	2380      	movs	r3, #128	; 0x80
+ 53a:	045b      	lsls	r3, r3, #17
+ 53c:	4013      	ands	r3, r2
+ 53e:	d1f7      	bne.n	530 <SystemInit+0xcc>
+	SCG->SIRCDIV = SCG_SIRCDIV_DIV3_VAL | SCG_SIRCDIV_DIV1_VAL;
+ 540:	4911      	ldr	r1, [pc, #68]	; (588 <SystemInit+0x124>)
+ 542:	2381      	movs	r3, #129	; 0x81
+ 544:	009b      	lsls	r3, r3, #2
+ 546:	2280      	movs	r2, #128	; 0x80
+ 548:	0252      	lsls	r2, r2, #9
+ 54a:	50ca      	str	r2, [r1, r3]
+	SCG->SIRCCFG = SCG_SIRCCFG_RANGE_VAL;
+ 54c:	4a0e      	ldr	r2, [pc, #56]	; (588 <SystemInit+0x124>)
+ 54e:	2382      	movs	r3, #130	; 0x82
+ 550:	009b      	lsls	r3, r3, #2
+ 552:	2101      	movs	r1, #1
+ 554:	50d1      	str	r1, [r2, r3]
+	SCG->SIRCCSR = SCG_SIRCCSR_SIRCLPEN_MASK |
+ 556:	4a0c      	ldr	r2, [pc, #48]	; (588 <SystemInit+0x124>)
+ 558:	2380      	movs	r3, #128	; 0x80
+ 55a:	009b      	lsls	r3, r3, #2
+ 55c:	2107      	movs	r1, #7
+ 55e:	50d1      	str	r1, [r2, r3]
+					SCG_SIRCCSR_SIRCSTEN_MASK |
+					SCG_SIRCCSR_SIRCEN_MASK;
+	while (!(SCG->SIRCCSR & SCG_SIRCCSR_SIRCVLD_MASK));
+ 560:	46c0      	nop			; (mov r8, r8)
+ 562:	4a09      	ldr	r2, [pc, #36]	; (588 <SystemInit+0x124>)
+ 564:	2380      	movs	r3, #128	; 0x80
+ 566:	009b      	lsls	r3, r3, #2
+ 568:	58d2      	ldr	r2, [r2, r3]
+ 56a:	2380      	movs	r3, #128	; 0x80
+ 56c:	045b      	lsls	r3, r3, #17
+ 56e:	4013      	ands	r3, r2
+ 570:	d0f7      	beq.n	562 <SystemInit+0xfe>
+
+	SCG->VCCR = SCG_CCRCSR_SCS_VAL_SIRC | SCG_CCRCSR_DIVCORE_VLPR_VAL | SCG_CCRCSR_DIVSLOW_VLPR_VAL;
+ 572:	4b05      	ldr	r3, [pc, #20]	; (588 <SystemInit+0x124>)
+ 574:	4a0a      	ldr	r2, [pc, #40]	; (5a0 <SystemInit+0x13c>)
+ 576:	619a      	str	r2, [r3, #24]
+}
+ 578:	46c0      	nop			; (mov r8, r8)
+ 57a:	46bd      	mov	sp, r7
+ 57c:	bd80      	pop	{r7, pc}
+ 57e:	46c0      	nop			; (mov r8, r8)
+ 580:	40076000 	.word	0x40076000
+ 584:	000021a0 	.word	0x000021a0
+ 588:	4007b000 	.word	0x4007b000
+ 58c:	00010001 	.word	0x00010001
+ 590:	00000604 	.word	0x00000604
+ 594:	00080301 	.word	0x00080301
+ 598:	04030003 	.word	0x04030003
+ 59c:	06010002 	.word	0x06010002
+ 5a0:	02000003 	.word	0x02000003
+
+000005a4 <SystemCoreClockUpdate>:
+
+void SystemCoreClockUpdate(void)
+{
+ 5a4:	b580      	push	{r7, lr}
+ 5a6:	af00      	add	r7, sp, #0
+	SystemCoreClock = CORE_FREQ;
+ 5a8:	4b02      	ldr	r3, [pc, #8]	; (5b4 <SystemCoreClockUpdate+0x10>)
+ 5aa:	4a03      	ldr	r2, [pc, #12]	; (5b8 <SystemCoreClockUpdate+0x14>)
+ 5ac:	601a      	str	r2, [r3, #0]
+}
+ 5ae:	46c0      	nop			; (mov r8, r8)
+ 5b0:	46bd      	mov	sp, r7
+ 5b2:	bd80      	pop	{r7, pc}
+ 5b4:	1fff8800 	.word	0x1fff8800
+ 5b8:	044aa200 	.word	0x044aa200
+
+000005bc <HardFault_Handler>:
+	.section .text.HardFault_Handler, "ax", %progbits
+	.type HardFault_Handler, %function
+	.thumb_func
+HardFault_Handler:
+
+	bkpt
+ 5bc:	be00      	bkpt	0x0000
+	b HardFault_Handler
+ 5be:	e7fd      	b.n	5bc <HardFault_Handler>
+
+000005c0 <INTMUX0_0_IRQHandler>:
+	.section .text.INTMUX0_IRQHandler, "ax", %progbits
+	.type INTMUX0_IRQHandler, %function
+	.thumb_func
+INTMUX0_IRQHandler:
+
+	push {lr}
+ 5c0:	b500      	push	{lr}
+	mrs r0, ipsr
+ 5c2:	f3ef 8005 	mrs	r0, IPSR
+	ldr r1, =IPSR_INTMUX0_MASK
+ 5c6:	2103      	movs	r1, #3
+	ands r0, r1
+ 5c8:	4008      	ands	r0, r1
+	lsls r0, #IPSR_INTMUX0_SHFT
+ 5ca:	0180      	lsls	r0, r0, #6
+	ldr r1, =VEC_BASE_ADDR
+ 5cc:	4905      	ldr	r1, [pc, #20]	; (5e4 <INTMUX0_IRQHandler_end+0x4>)
+	orrs r0, r1
+ 5ce:	4308      	orrs	r0, r1
+	ldr r0, [r0]
+ 5d0:	6800      	ldr	r0, [r0, #0]
+	movs r0, r0
+ 5d2:	0000      	movs	r0, r0
+	beq INTMUX0_IRQHandler_end
+ 5d4:	d004      	beq.n	5e0 <INTMUX0_IRQHandler_end>
+	ldr r1, =VTOR_ADDR
+ 5d6:	4904      	ldr	r1, [pc, #16]	; (5e8 <INTMUX0_IRQHandler_end+0x8>)
+	ldr r1, [r1]
+ 5d8:	6809      	ldr	r1, [r1, #0]
+	adds r0, r1
+ 5da:	1840      	adds	r0, r0, r1
+	ldr r0, [r0]
+ 5dc:	6800      	ldr	r0, [r0, #0]
+	blx r0
+ 5de:	4780      	blx	r0
+
+000005e0 <INTMUX0_IRQHandler_end>:
+INTMUX0_IRQHandler_end:
+	pop {pc}
+ 5e0:	bd00      	pop	{pc}
+ 5e2:	0000      	.short	0x0000
+	ldr r1, =VEC_BASE_ADDR
+ 5e4:	40024004 	.word	0x40024004
+	ldr r1, =VTOR_ADDR
+ 5e8:	e000ed08 	.word	0xe000ed08
+
+000005ec <memcpy>:
+	.section .text.memcpy, "ax", %progbits
+	.type memcpy, %function
+	.thumb_func
+memcpy:
+
+	movs r2, r2
+ 5ec:	0012      	movs	r2, r2
+	beq memcpy_end
+ 5ee:	d003      	beq.n	5f8 <memcpy_end>
+
+000005f0 <memcpy_loop>:
+memcpy_loop:
+	subs r2, #1
+ 5f0:	3a01      	subs	r2, #1
+	ldrb r3, [r1, r2]
+ 5f2:	5c8b      	ldrb	r3, [r1, r2]
+	strb r3, [r0, r2]
+ 5f4:	5483      	strb	r3, [r0, r2]
+	bne memcpy_loop
+ 5f6:	d1fb      	bne.n	5f0 <memcpy_loop>
+
+000005f8 <memcpy_end>:
+memcpy_end:
+	bx lr
+ 5f8:	4770      	bx	lr
+
+000005fa <memset>:
+	.section .text.memset, "ax", %progbits
+	.type memset, %function
+	.thumb_func
+memset:
+
+	movs r2, r2
+ 5fa:	0012      	movs	r2, r2
+	beq memset_end
+ 5fc:	d002      	beq.n	604 <memset_end>
+
+000005fe <memset_loop>:
+memset_loop:
+	subs r2, #1
+ 5fe:	3a01      	subs	r2, #1
+	strb r1, [r0, r2]
+ 600:	5481      	strb	r1, [r0, r2]
+	bne memset_loop
+ 602:	d1fc      	bne.n	5fe <memset_loop>
+
+00000604 <memset_end>:
+memset_end:
+	bx lr
+ 604:	4770      	bx	lr
+
+00000606 <NMI_Handler>:
+	.section .text.NMI_Handler, "ax", %progbits
+	.type NMI_Handler, %function
+	.thumb_func
+NMI_Handler:
+
+	bx lr
+ 606:	4770      	bx	lr
+
+00000608 <tstmr_get_val>:
+	.section .text.tstmr_get_val, "ax", %progbits
+	.type tstmr_get_val, %function
+	.thumb_func
+tstmr_get_val:
+
+	mrs r3, primask
+ 608:	f3ef 8310 	mrs	r3, PRIMASK
+	cpsid i
+ 60c:	b672      	cpsid	i
+	ldr r2, =TSTMR_L_ADDR
+ 60e:	4a03      	ldr	r2, [pc, #12]	; (61c <tstmr_get_val+0x14>)
+	ldr r0, [r2]
+ 610:	6810      	ldr	r0, [r2, #0]
+	ldr r2, =TSTMR_H_ADDR
+ 612:	4a03      	ldr	r2, [pc, #12]	; (620 <tstmr_get_val+0x18>)
+	ldr r1, [r2]
+ 614:	6811      	ldr	r1, [r2, #0]
+	msr primask, r3
+ 616:	f383 8810 	msr	PRIMASK, r3
+	bx lr
+ 61a:	4770      	bx	lr
+	ldr r2, =TSTMR_L_ADDR
+ 61c:	400750f0 	.word	0x400750f0
+	ldr r2, =TSTMR_H_ADDR
+ 620:	400750f4 	.word	0x400750f4
+
+00000624 <wdog_set>:
+#include "MKL28Z7.h"
+#include "wdog.h"
+#include "tstmr.h"
+
+void wdog_set(WDOG_CONF wdog_conf, uint16_t timeout)
+{
+ 624:	b590      	push	{r4, r7, lr}
+ 626:	b08b      	sub	sp, #44	; 0x2c
+ 628:	af00      	add	r7, sp, #0
+ 62a:	0002      	movs	r2, r0
+ 62c:	1dfb      	adds	r3, r7, #7
+ 62e:	701a      	strb	r2, [r3, #0]
+ 630:	1d3b      	adds	r3, r7, #4
+ 632:	1c0a      	adds	r2, r1, #0
+ 634:	801a      	strh	r2, [r3, #0]
+	uint64_t delay_begin, delay_end;
+	uint32_t primask;
+
+	if (timeout == 0) {
+ 636:	1d3b      	adds	r3, r7, #4
+ 638:	881b      	ldrh	r3, [r3, #0]
+ 63a:	2b00      	cmp	r3, #0
+ 63c:	d103      	bne.n	646 <wdog_set+0x22>
+		timeout = 0xFFFFu;
+ 63e:	1d3b      	adds	r3, r7, #4
+ 640:	2201      	movs	r2, #1
+ 642:	4252      	negs	r2, r2
+ 644:	801a      	strh	r2, [r3, #0]
+ */
+__attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_PRIMASK(void)
+{
+  uint32_t result;
+
+  __ASM volatile ("MRS %0, primask" : "=r" (result) );
+ 646:	f3ef 8310 	mrs	r3, PRIMASK
+ 64a:	60fb      	str	r3, [r7, #12]
+  return(result);
+ 64c:	68fb      	ldr	r3, [r7, #12]
+	}
+
+	primask = __get_PRIMASK();
+ 64e:	627b      	str	r3, [r7, #36]	; 0x24
+  __ASM volatile ("cpsid i" : : : "memory");
+ 650:	b672      	cpsid	i
+	__disable_irq();
+
+	WDOG0->CNT = WDOG_UNLOCK_SEQ;
+ 652:	4b2d      	ldr	r3, [pc, #180]	; (708 <wdog_set+0xe4>)
+ 654:	4a2d      	ldr	r2, [pc, #180]	; (70c <wdog_set+0xe8>)
+ 656:	605a      	str	r2, [r3, #4]
+	WDOG0->TOVAL = timeout;
+ 658:	4b2b      	ldr	r3, [pc, #172]	; (708 <wdog_set+0xe4>)
+ 65a:	1d3a      	adds	r2, r7, #4
+ 65c:	8812      	ldrh	r2, [r2, #0]
+ 65e:	609a      	str	r2, [r3, #8]
+
+	switch (wdog_conf) {
+ 660:	1dfb      	adds	r3, r7, #7
+ 662:	781b      	ldrb	r3, [r3, #0]
+ 664:	2b08      	cmp	r3, #8
+ 666:	d828      	bhi.n	6ba <wdog_set+0x96>
+ 668:	009a      	lsls	r2, r3, #2
+ 66a:	4b29      	ldr	r3, [pc, #164]	; (710 <wdog_set+0xec>)
+ 66c:	18d3      	adds	r3, r2, r3
+ 66e:	681b      	ldr	r3, [r3, #0]
+ 670:	469f      	mov	pc, r3
+	case WDOG_CONF_DIS:
+		WDOG0->CS = WDOG_CS_CMD32EN_MASK | WDOG_CS_UPDATE_MASK;
+ 672:	4b25      	ldr	r3, [pc, #148]	; (708 <wdog_set+0xe4>)
+ 674:	4a27      	ldr	r2, [pc, #156]	; (714 <wdog_set+0xf0>)
+ 676:	601a      	str	r2, [r3, #0]
+		break;
+ 678:	e023      	b.n	6c2 <wdog_set+0x9e>
+	case WDOG_CONF_BUSCLK_PRESC_OFF:
+		WDOG0->CS = WDOG_CS_CMD32EN_MASK | WDOG_CS_CLK_VAL_BUSCLK |
+ 67a:	4b23      	ldr	r3, [pc, #140]	; (708 <wdog_set+0xe4>)
+ 67c:	4a26      	ldr	r2, [pc, #152]	; (718 <wdog_set+0xf4>)
+ 67e:	601a      	str	r2, [r3, #0]
+					WDOG_CS_EN_MASK | WDOG_CS_UPDATE_MASK;
+		break;
+ 680:	e01f      	b.n	6c2 <wdog_set+0x9e>
+	case WDOG_CONF_BUSCLK_PRESC_ON:
+		WDOG0->CS = WDOG_CS_CMD32EN_MASK | WDOG_CS_CLK_VAL_BUSCLK |
+ 682:	4b21      	ldr	r3, [pc, #132]	; (708 <wdog_set+0xe4>)
+ 684:	4a25      	ldr	r2, [pc, #148]	; (71c <wdog_set+0xf8>)
+ 686:	601a      	str	r2, [r3, #0]
+					WDOG_CS_PRES_MASK | WDOG_CS_EN_MASK | WDOG_CS_UPDATE_MASK;
+		break;
+ 688:	e01b      	b.n	6c2 <wdog_set+0x9e>
+	case WDOG_CONF_LPOCLK_PRESC_OFF:
+		WDOG0->CS = WDOG_CS_CMD32EN_MASK | WDOG_CS_CLK_VAL_LPOCLK |
+ 68a:	4b1f      	ldr	r3, [pc, #124]	; (708 <wdog_set+0xe4>)
+ 68c:	4a24      	ldr	r2, [pc, #144]	; (720 <wdog_set+0xfc>)
+ 68e:	601a      	str	r2, [r3, #0]
+					WDOG_CS_EN_MASK | WDOG_CS_UPDATE_MASK;
+		break;
+ 690:	e017      	b.n	6c2 <wdog_set+0x9e>
+	case WDOG_CONF_LPOCLK_PRESC_ON:
+		WDOG0->CS = WDOG_CS_CMD32EN_MASK | WDOG_CS_CLK_VAL_LPOCLK |
+ 692:	4b1d      	ldr	r3, [pc, #116]	; (708 <wdog_set+0xe4>)
+ 694:	4a23      	ldr	r2, [pc, #140]	; (724 <wdog_set+0x100>)
+ 696:	601a      	str	r2, [r3, #0]
+					WDOG_CS_PRES_MASK | WDOG_CS_EN_MASK | WDOG_CS_UPDATE_MASK;
+		break;
+ 698:	e013      	b.n	6c2 <wdog_set+0x9e>
+	case WDOG_CONF_SIRCCLK_PRESC_OFF:
+		WDOG0->CS = WDOG_CS_CMD32EN_MASK | WDOG_CS_CLK_VAL_SIRCCLK |
+ 69a:	4b1b      	ldr	r3, [pc, #108]	; (708 <wdog_set+0xe4>)
+ 69c:	4a22      	ldr	r2, [pc, #136]	; (728 <wdog_set+0x104>)
+ 69e:	601a      	str	r2, [r3, #0]
+					WDOG_CS_EN_MASK | WDOG_CS_UPDATE_MASK;
+		break;
+ 6a0:	e00f      	b.n	6c2 <wdog_set+0x9e>
+	case WDOG_CONF_SIRCCLK_PRESC_ON:
+		WDOG0->CS = WDOG_CS_CMD32EN_MASK | WDOG_CS_CLK_VAL_SIRCCLK |
+ 6a2:	4b19      	ldr	r3, [pc, #100]	; (708 <wdog_set+0xe4>)
+ 6a4:	4a21      	ldr	r2, [pc, #132]	; (72c <wdog_set+0x108>)
+ 6a6:	601a      	str	r2, [r3, #0]
+					WDOG_CS_PRES_MASK | WDOG_CS_EN_MASK | WDOG_CS_UPDATE_MASK;
+		break;
+ 6a8:	e00b      	b.n	6c2 <wdog_set+0x9e>
+	case WDOG_CONF_SOSCCLK_PRESC_OFF:
+		WDOG0->CS = WDOG_CS_CMD32EN_MASK | WDOG_CS_CLK_VAL_SOSCCLK |
+ 6aa:	4b17      	ldr	r3, [pc, #92]	; (708 <wdog_set+0xe4>)
+ 6ac:	4a20      	ldr	r2, [pc, #128]	; (730 <wdog_set+0x10c>)
+ 6ae:	601a      	str	r2, [r3, #0]
+					WDOG_CS_EN_MASK | WDOG_CS_UPDATE_MASK;
+		break;
+ 6b0:	e007      	b.n	6c2 <wdog_set+0x9e>
+	case WDOG_CONF_SOSCCLK_PRESC_ON:
+		WDOG0->CS = WDOG_CS_CMD32EN_MASK | WDOG_CS_CLK_VAL_SOSCCLK |
+ 6b2:	4b15      	ldr	r3, [pc, #84]	; (708 <wdog_set+0xe4>)
+ 6b4:	4a1f      	ldr	r2, [pc, #124]	; (734 <wdog_set+0x110>)
+ 6b6:	601a      	str	r2, [r3, #0]
+					WDOG_CS_PRES_MASK | WDOG_CS_EN_MASK | WDOG_CS_UPDATE_MASK;
+		break;
+ 6b8:	e003      	b.n	6c2 <wdog_set+0x9e>
+	default:
+		WDOG0->CS = WDOG_CS_CMD32EN_MASK | WDOG_CS_UPDATE_MASK;
+ 6ba:	4b13      	ldr	r3, [pc, #76]	; (708 <wdog_set+0xe4>)
+ 6bc:	4a15      	ldr	r2, [pc, #84]	; (714 <wdog_set+0xf0>)
+ 6be:	601a      	str	r2, [r3, #0]
+		break;
+ 6c0:	46c0      	nop			; (mov r8, r8)
+	}
+
+	delay_begin = tstmr_get_val();
+ 6c2:	f7ff ffa1 	bl	608 <tstmr_get_val>
+ 6c6:	0003      	movs	r3, r0
+ 6c8:	000c      	movs	r4, r1
+ 6ca:	61bb      	str	r3, [r7, #24]
+ 6cc:	61fc      	str	r4, [r7, #28]
+
+	do {
+		delay_end = tstmr_get_val();
+ 6ce:	f7ff ff9b 	bl	608 <tstmr_get_val>
+ 6d2:	0003      	movs	r3, r0
+ 6d4:	000c      	movs	r4, r1
+ 6d6:	613b      	str	r3, [r7, #16]
+ 6d8:	617c      	str	r4, [r7, #20]
+	} while ((delay_end - delay_begin) < WDOG_CONF_DELAY);
+ 6da:	6939      	ldr	r1, [r7, #16]
+ 6dc:	697a      	ldr	r2, [r7, #20]
+ 6de:	69bb      	ldr	r3, [r7, #24]
+ 6e0:	69fc      	ldr	r4, [r7, #28]
+ 6e2:	1ac9      	subs	r1, r1, r3
+ 6e4:	41a2      	sbcs	r2, r4
+ 6e6:	000b      	movs	r3, r1
+ 6e8:	0014      	movs	r4, r2
+ 6ea:	2c00      	cmp	r4, #0
+ 6ec:	d103      	bne.n	6f6 <wdog_set+0xd2>
+ 6ee:	d1ee      	bne.n	6ce <wdog_set+0xaa>
+ 6f0:	2b3f      	cmp	r3, #63	; 0x3f
+ 6f2:	d800      	bhi.n	6f6 <wdog_set+0xd2>
+ 6f4:	e7eb      	b.n	6ce <wdog_set+0xaa>
+ 6f6:	6a7b      	ldr	r3, [r7, #36]	; 0x24
+ 6f8:	60bb      	str	r3, [r7, #8]
+  \details Assigns the given value to the Priority Mask Register.
+  \param [in]    priMask  Priority Mask
+ */
+__attribute__( ( always_inline ) ) __STATIC_INLINE void __set_PRIMASK(uint32_t priMask)
+{
+  __ASM volatile ("MSR primask, %0" : : "r" (priMask) : "memory");
+ 6fa:	68bb      	ldr	r3, [r7, #8]
+ 6fc:	f383 8810 	msr	PRIMASK, r3
+
+	__set_PRIMASK(primask);
+}
+ 700:	46c0      	nop			; (mov r8, r8)
+ 702:	46bd      	mov	sp, r7
+ 704:	b00b      	add	sp, #44	; 0x2c
+ 706:	bd90      	pop	{r4, r7, pc}
+ 708:	40076000 	.word	0x40076000
+ 70c:	d928c520 	.word	0xd928c520
+ 710:	00000768 	.word	0x00000768
+ 714:	00002020 	.word	0x00002020
+ 718:	000020a0 	.word	0x000020a0
+ 71c:	000030a0 	.word	0x000030a0
+ 720:	000021a0 	.word	0x000021a0
+ 724:	000031a0 	.word	0x000031a0
+ 728:	000022a0 	.word	0x000022a0
+ 72c:	000032a0 	.word	0x000032a0
+ 730:	000023a0 	.word	0x000023a0
+ 734:	000033a0 	.word	0x000033a0
+
+00000738 <wdog_refresh>:
+} WDOG_CONF;
+
+void wdog_set(WDOG_CONF wdog_conf, uint16_t timeout);
+
+static inline void wdog_refresh(void)
+{
+ 738:	b580      	push	{r7, lr}
+ 73a:	af00      	add	r7, sp, #0
+	WDOG0->CNT = WDOG_REFRESH_SEQ;
+ 73c:	4b02      	ldr	r3, [pc, #8]	; (748 <wdog_refresh+0x10>)
+ 73e:	4a03      	ldr	r2, [pc, #12]	; (74c <wdog_refresh+0x14>)
+ 740:	605a      	str	r2, [r3, #4]
+}
+ 742:	46c0      	nop			; (mov r8, r8)
+ 744:	46bd      	mov	sp, r7
+ 746:	bd80      	pop	{r7, pc}
+ 748:	40076000 	.word	0x40076000
+ 74c:	b480a602 	.word	0xb480a602
+
+00000750 <main>:
+
+#include "MKL28Z7.h"
+#include "wdog.h"
+
+__attribute__ ((weak)) int main(void)
+{
+ 750:	b580      	push	{r7, lr}
+ 752:	af00      	add	r7, sp, #0
+	wdog_set(WDOG_CONF_LPOCLK_PRESC_OFF, 1000);
+ 754:	23fa      	movs	r3, #250	; 0xfa
+ 756:	009b      	lsls	r3, r3, #2
+ 758:	0019      	movs	r1, r3
+ 75a:	2003      	movs	r0, #3
+ 75c:	f7ff ff62 	bl	624 <wdog_set>
+
+	while (1) {
+		wdog_refresh();
+ 760:	f7ff ffea 	bl	738 <wdog_refresh>
+ 764:	e7fc      	b.n	760 <main+0x10>
+ 766:	0000      	movs	r0, r0
+ 768:	00000672 	.word	0x00000672
+ 76c:	0000067a 	.word	0x0000067a
+ 770:	00000682 	.word	0x00000682
+ 774:	0000068a 	.word	0x0000068a
+ 778:	00000692 	.word	0x00000692
+ 77c:	0000069a 	.word	0x0000069a
+ 780:	000006a2 	.word	0x000006a2
+ 784:	000006aa 	.word	0x000006aa
+ 788:	000006b2 	.word	0x000006b2

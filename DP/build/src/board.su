@@ -1,0 +1,9 @@
+core_cm0plus.h:745:22:NVIC_EnableIRQ	16	static
+core_cm0plus.h:804:22:NVIC_SetPriority	24	static
+board.c:23:6:Board_Init	8	static
+board.c:37:6:Board_MCULED_Set	24	static
+board.c:43:6:Board_MCUBTN_Get	16	static
+board.c:50:6:board_WIFI_Init	8	static
+board.c:73:6:board_MCULED_Init	8	static
+board.c:84:6:board_MCUBTN_Init	8	static
+board.c:95:6:board_MCUSW_Init	8	static
