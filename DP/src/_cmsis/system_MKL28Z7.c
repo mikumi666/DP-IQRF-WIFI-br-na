@@ -6,7 +6,7 @@
 
 #include "MKL28Z7.h"
 
-volatile uint32_t SystemCoreClock;
+volatile uint32_t SystemCoreClock = DEFAULT_SYSTEM_CLOCK;
 
 void SystemInit(void)
 {
@@ -56,5 +56,38 @@ void SystemInit(void)
 
 void SystemCoreClockUpdate(void)
 {
-	SystemCoreClock = CORE_FREQ;
+	uint32_t SCGOUTClock;                                 /* Variable to store output clock frequency of the SCG module */
+	  uint16_t Divider, prediv, multi;
+	  Divider = ((SCG->CSR & SCG_CSR_DIVCORE_MASK) >> SCG_CSR_DIVCORE_SHIFT) + 1;
+
+	  switch ((SCG->CSR & SCG_CSR_SCS_MASK) >> SCG_CSR_SCS_SHIFT) {
+	    case 0x1:
+	      /* System OSC */
+	      SCGOUTClock = CPU_INT_SLOW_CLK_HZ;
+	      break;
+	    case 0x2:
+	      /* Slow IRC */
+	      SCGOUTClock = (((SCG->SIRCCFG & SCG_SIRCCFG_RANGE_MASK) >> SCG_SIRCCFG_RANGE_SHIFT) ? 8000000 : 2000000);
+	      break;
+	    case 0x3:
+	      /* Fast IRC */
+	      SCGOUTClock = 48000000 + ((SCG->FIRCCFG & SCG_FIRCCFG_RANGE_MASK) >> SCG_FIRCCFG_RANGE_SHIFT) * 4000000;
+	      break;
+	    case 0x6:
+	      /* System PLL */
+	      if ((SCG->SPLLCFG & SCG_SPLLCFG_SOURCE_MASK) >> SCG_SPLLCFG_SOURCE_SHIFT) {
+	        SCGOUTClock = 48000000 + ((SCG->FIRCCFG & SCG_FIRCCFG_RANGE_MASK) >> SCG_FIRCCFG_RANGE_SHIFT) * 4000000;
+	      }
+	      else {
+	        SCGOUTClock = CPU_INT_SLOW_CLK_HZ;
+	      }
+	      prediv = ((SCG->SPLLCFG & SCG_SPLLCFG_PREDIV_MASK) >> SCG_SPLLCFG_PREDIV_SHIFT) + 1;
+	      multi = ((SCG->SPLLCFG & SCG_SPLLCFG_MULT_MASK) >> SCG_SPLLCFG_MULT_SHIFT) + 16;
+	      SCGOUTClock = SCGOUTClock * multi / (prediv * 2);
+	      break;
+	    default:
+	      return;
+	  }
+
+	  SystemCoreClock = (SCGOUTClock / Divider);
 }

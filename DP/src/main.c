@@ -9,6 +9,7 @@
 
 #include "board.h"
 #include "wifi_rn131.h"
+#include "usb_vcom.h"
 
 
 #define PORT_LPUART0			PORTB
@@ -31,6 +32,7 @@ char buff2[50];
 __attribute__ ((weak)) int main(void)
 {
 	wdog_set(WDOG_CONF_LPOCLK_PRESC_OFF, 10000);
+	int aff = SCG->SOSCCFG;
 
 /* LPUART */
 	char testBuff[] = "Ahoj";
@@ -59,6 +61,7 @@ __attribute__ ((weak)) int main(void)
 	memset((void*)FSL_FEATURE_USB_KHCI_USB_RAM_BASE_ADDRESS, 0ul, FSL_FEATURE_USB_KHCI_USB_RAM); // Nulovani RAM pro USB
 	*/
 
+	USB_VCOM_Init();
 
 
 	//USB_devInit(NULL);
@@ -94,6 +97,9 @@ bool b = false;
 			Board_MCULED_Set(4, false);
 		}
 		i++;
+
+		USB_VCOM_Service();
+
 		wdog_refresh();
 	}
 
